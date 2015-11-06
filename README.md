@@ -1,4 +1,4 @@
 # quetal
 Projeto Startup
 
-O nosso projeto é bem legal!
+O QueTal é o melhor site para descobrir o que fazer ou programar o seu passeio perfeito.
