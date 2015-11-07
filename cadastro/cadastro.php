@@ -6,7 +6,7 @@
 -->
 <html>
     <head>
-        <title>Highlights by HTML5 UP</title>
+        <title>QUE TAL? by Silicius</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -24,7 +24,7 @@
             <div class="container">
                 <ul class="actions">
                     <li><a href="#one" class="button special scrolly">Começar</a></li>
-                    <li><a href="../index.php" class="button scrolly">Voltar</a></li>
+                    <li><a href="../index/index.php" class="button scrolly">Voltar</a></li>
                 </ul>
             </div>
         </section>

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Strata by HTML5 UP</title>
+		<title>QUE TAL? by Silicius</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -20,7 +20,7 @@
 				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 				<h1><strong>I am Strata</strong>, a super simple<br />
 				responsive site template freebie<br />
-                                <a href="../index.php">Voltar</a>.</h1>
+                                <a href="../index/index.php">Voltar</a>.</h1>
 			</header>
 
 		<!-- Main -->

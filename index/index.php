@@ -29,8 +29,8 @@
                             <h1><strong><a href="index.php">Que tal?</a></strong></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.php">Home</a></li>
-                                                <li><a href="cadastro/cadastro.php">Cadastrar</a></li>
+						<li><a href="index/index.php">Home</a></li>
+                                                <li><a href="../cadastro/cadastro.php">Cadastrar</a></li>
                                                 <li><a href="#four" class="scrolly">Login</a></li>
 					</ul>
 				</nav>
