@@ -1,0 +1,4 @@
+# quetal
+Projeto Startup
+
+QueTal
