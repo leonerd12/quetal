@@ -31,7 +31,7 @@
                 <ul>
                     <li><a href="../index/index.php">Home</a></li>
                     <li><a href="../cadastro/cadastro.php">Cadastrar</a></li>
-                    <li><a href="#four" class="scrolly">Login</a></li>
+                    <li><a href="../index/index.php#four" class="scrolly">Login</a></li>
                 </ul>
             </nav>
         </header>
@@ -53,10 +53,10 @@
                             <div class="12u$">
                                 <input name="sNome" placeholder="Sobrenome" type="text"  required="required"/>
                             </div>
-                            <div class="2u">
+                            <div class="2u 3u(xsmall)">
                                 <input name="dd" placeholder="Dia" type="text"  required="required"/>
                             </div>
-                            <div class="2u">
+                            <div class="2u 3u(xsmall)">
                                 <input name="mm" placeholder="Mês" type="text"  required="required"/>
                             </div>
                             <div class="4u$">

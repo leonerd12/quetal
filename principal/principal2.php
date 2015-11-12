@@ -28,15 +28,56 @@
             <h1><strong><a href="index.html">QUE TAL?</a></strong></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="../principal/principal.php">Início</a></li>
+                    <li><a href="../principal/principal1.php">Início</a></li>
                     <li><a href="../conta/conta.php">Conta</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
-        </header>
+        </header>        
+
+        <!-- Two -->
+        <section id="two" class="wrapper style2 special">
+            <div class="container">
+                <header class="major">
+                    <h2>O que queres hoje?</h2>
+                    <p>O que desejas para hoje?</p>
+                </header>
+                <div class="row 150%">
+                    <div class="4u 12u$(xsmall)">
+                        <a href="quetal.php">                        
+                            <div class="image fit captioned">
+                                <img src="images/pic02.jpg" alt="" />
+                                <h3>Quero sair com os amigos.</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="4u 12u$(xsmall)">
+                        <a href="quetal.php">                        
+                            <div class="image fit captioned">
+                                <img src="images/pic03.jpg" alt="" />
+                                <h3>Quero sair com boa companhia.</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="4u$ 12u$(xsmall)">
+                        <a href="quetal.php">                        
+                            <div class="image fit captioned">
+                                <img src="images/pic08.jpg" alt="" />
+                                <h3>Quero sair sozinho.</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--                                <ul class="actions">
+                                                        <li><a href="#" class="button special big">Nulla luctus</a></li>
+                                                        <li><a href="#" class="button big">Sed vulputate</a></li>
+                                                </ul>-->
+            </div>
+        </section>
+
 
         <!-- Main -->
-        <section id="main" class="wrapper">
+<!--        <section id="main" class="wrapper">
             <div class="container">
 
                 <header class="major special">
@@ -50,7 +91,7 @@
                 <p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet blandit adipiscing arcu ante.</p>
 
             </div>
-        </section>
+        </section>-->
 
         <!-- Footer -->
         <footer id="footer">

@@ -19,6 +19,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
         while ($linha = pg_fetch_assoc($result)) {
             if ($senha == $linha['senha'] && $email == $linha['email']) {
                 //Acesso Permitido
+                session_start();
                 $_SESSION['id'] = $linha['id'];
                 $_SESSION['nome'] = $linha['nome'];
                 $_SESSION['sNome'] = $linha['sobrenome'];
