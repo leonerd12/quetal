@@ -69,40 +69,40 @@
                                 <input name="senha" placeholder="Senha" type="password"  required="required"/>
                             </div>
                             <div class="4u ">
-                                <input type="radio" id="g1" name="1" value="Movimentados">
-                                <label for="g1">Movimentados</label>
+                                <input type="checkbox" id="g1" name="1" value="1">
+                                <label for="g1">Pipoca</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g2" name="2" value="Música">
+                                <input type="checkbox" id="g2" name="2" value="2">
                                 <label for="g2">Música</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g3" name="3" value="Música">
-                                <label for="g3">Amigos</label>
+                                <input type="checkbox" id="g3" name="3" value="3">
+                                <label for="g3">Comida</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g4" name="4" value="Comida">
-                                <label for="g4">Comida</label>
+                                <input type="checkbox" id="g4" name="4" value="4">
+                                <label for="g4">Passeio</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g5" name="5" value="Bebida">
+                                <input type="checkbox" id="g5" name="5" value="5">
                                 <label for="g5">Bebida</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g6" name="6" value="Tarde">
-                                <label for="g6">Tarde</label>
+                                <input type="checkbox" id="g6" name="6" value="6">
+                                <label for="g6">Companhia</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g7" name="7" value="Cedo">
-                                <label for="g7">Cedo</label>
+                                <input type="checkbox" id="g7" name="7" value="7">
+                                <label for="g7">Festa</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g8" name="8" value="asdfter">
-                                <label for="g8">aisudfy</label>
+                                <input type="checkbox" id="g8" name="8" value="8">
+                                <label for="g8">Fim de Tarde</label>
                             </div>
                             <div class="4u">
-                                <input type="radio" id="g9" name="9" value="High">
-                                <label for="g9">High Priority</label>
+                                <input type="checkbox" id="g9" name="9" value="9">
+                                <label for="g9">Noite</label>
                             </div>
                         </div>
                     </div>

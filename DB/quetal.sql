@@ -15,22 +15,47 @@
 -- nome varchar(50),
 -- sobrenome varchar(50),
 -- dataNasc date,
--- person int,
--- gostos varchar(400),
 -- email varchar(100),
 -- senha varchar(100)
 -- );
-
+-- 
 -- CREATE TABLE empresa(
 -- id serial primary key,
 -- nome varchar(100),
--- tipo int,
--- carac varchar(400)
+-- tipo int
+-- );
+-- 
+-- CREATE TABLE interesse(
+-- id serial primary key,
+-- tipo varchar(50)
+-- );
+-- 
+-- 
+-- INSERT INTO interesse (tipo) VALUES ('Pipoca');
+-- INSERT INTO interesse (tipo) VALUES ('Música');
+-- INSERT INTO interesse (tipo) VALUES ('Comida');
+-- INSERT INTO interesse (tipo) VALUES ('Passeio');
+-- INSERT INTO interesse (tipo) VALUES ('Bebida');
+-- INSERT INTO interesse (tipo) VALUES ('Companhia');
+-- INSERT INTO interesse (tipo) VALUES ('Festa');
+-- INSERT INTO interesse (tipo) VALUES ('Fim de Tarde');
+-- INSERT INTO interesse (tipo) VALUES ('Noite');
+-- 
+-- 
+-- 
+-- CREATE TABLE us_int(
+-- id serial primary key,
+-- id_us int references usuario(id) ON DELETE CASCADE,
+-- id_int int references interesse(id) ON DELETE CASCADE
+-- );
+-- 
+-- CREATE TABLE emp_int(
+-- id serial primary key,
+-- id_emp int references empresa(id) ON DELETE CASCADE,
+-- id_int int references interesse(id) ON DELETE CASCADE
 -- );
 
--- INSERT into empresa (nome, carac) values ('teste5', 'CinemaComidaMusica');
-
--- DROP table empresa;
--- SELECT * FROM usuario;
+-- DROP TABLE usuario, empresa, interesse, us_int, emp_int;
+SELECT * FROM us_int;
 -- SELECT * FROM empresa where carac like '' ;
--- DELETE FROM usuario;
+-- DELETE FROM usuario where id=3;
