@@ -28,7 +28,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
                 $_SESSION['logado'] = 1;
                 //$_SESSION['hora'] = time();
                 //$_SESSION['tempolimite'] = 600;
-                header("location: ../principal/principal.php");
+                header("location: ../conta/conta.php");
                 break;
             } else {
                 //Usuario ou senha invalido

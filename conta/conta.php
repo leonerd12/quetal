@@ -18,10 +18,11 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+            <a href="#" class="image avatar"><img src="images/1.png" alt="" /></a>
             <h1><strong>I am <?= $_SESSION['nome']?></strong>
                 <br />
-                <a href="../principal/principal1.php">Voltar</a>.</h1>
+                <!--<a href="../principal/principal.php">Voltar</a>-->
+            </h1>
         </header>
 
         <!-- Main -->
@@ -35,13 +36,13 @@
                 </header>
                 <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
                 <ul class="actions">
-                    <li><a href="../principal/principal2.php" class="button special">QUE TAL?</a></li>
+                    <li><a href="../principal/principal.php" class="button special">QUE TAL?</a></li>
                 </ul>
             </section>
 
             <!-- Two -->
             <section id="two">
-                <h2>Recent Work</h2>
+                <h2>Recomendações para você</h2>
                 <div class="row">
                     <article class="6u 12u$(xsmall) work-item">
                         <a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>

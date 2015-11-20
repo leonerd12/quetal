@@ -68,6 +68,42 @@
                             <div class="12u$">
                                 <input name="senha" placeholder="Senha" type="password"  required="required"/>
                             </div>
+                            <div class="4u ">
+                                <input type="radio" id="g1" name="1" value="Movimentados">
+                                <label for="g1">Movimentados</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g2" name="2" value="Música">
+                                <label for="g2">Música</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g3" name="3" value="Música">
+                                <label for="g3">Amigos</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g4" name="4" value="Comida">
+                                <label for="g4">Comida</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g5" name="5" value="Bebida">
+                                <label for="g5">Bebida</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g6" name="6" value="Tarde">
+                                <label for="g6">Tarde</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g7" name="7" value="Cedo">
+                                <label for="g7">Cedo</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g8" name="8" value="asdfter">
+                                <label for="g8">aisudfy</label>
+                            </div>
+                            <div class="4u">
+                                <input type="radio" id="g9" name="9" value="High">
+                                <label for="g9">High Priority</label>
+                            </div>
                         </div>
                     </div>
                     <br />

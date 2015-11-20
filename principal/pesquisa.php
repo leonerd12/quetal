@@ -25,47 +25,63 @@
 
         <!-- Header -->
         <header id="header">
-            <h1><strong><a href="index.html">QUE TAL?</a></strong></h1>
+            <h1><strong><a href="principal.php">QUE TAL?</a></strong></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="../principal/principal1.php">Início</a></li>
+                    <li>                        
+                        <form method="post" action="#">
+                            <div class="12u$">
+                                <div class="select-wrapper">
+                                    <select name="category" id="category">
+                                        <option value="">- Categoria -</option>
+                                        <option value="1">Restaurantes</option>
+                                        <option value="1">Bares</option>
+                                        <option value="1">Baladas</option>
+                                        <option value="1">Motéis</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="principal.php">Início</a></li>
                     <li><a href="../conta/conta.php">Conta</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </nav>
-        </header>        
+        </header>
+
 
         <!-- Two -->
         <section id="two" class="wrapper style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>O que queres hoje?</h2>
-                    <p>O que desejas para hoje?</p>
+                    <h2>Principais atrações</h2>
+                    <p>da cidade de Boa Vista</p>
                 </header>
                 <div class="row 150%">
-                    <div class="4u 12u$(xsmall)">
-                        <a href="quetal.php">                        
-                            <div class="image fit captioned">
-                                <img src="images/pic02.jpg" alt="" />
-                                <h3>Quero sair com os amigos.</h3>
-                            </div>
-                        </a>
+                    <div class="6u 6u(xsmall)">
+                        <div class="image fit captioned">
+                            <img src="images/pic02.jpg" alt="" />
+                            <h3>Restaurante tal</h3>
+                        </div>
                     </div>
-                    <div class="4u 12u$(xsmall)">
-                        <a href="quetal.php">                        
-                            <div class="image fit captioned">
-                                <img src="images/pic03.jpg" alt="" />
-                                <h3>Quero sair com boa companhia.</h3>
-                            </div>
-                        </a>
+                    <div class="6u 6u$(xsmall)">
+                        <div class="image fit captioned">
+                            <img src="images/pic03.jpg" alt="" />
+                            <h3>Pizzaria Trevo</h3>
+                        </div>
                     </div>
-                    <div class="4u$ 12u$(xsmall)">
-                        <a href="quetal.php">                        
-                            <div class="image fit captioned">
-                                <img src="images/pic08.jpg" alt="" />
-                                <h3>Quero sair sozinho.</h3>
-                            </div>
-                        </a>
+                    <div class="6u 6u(xsmall)">
+                        <div class="image fit captioned">
+                            <img src="images/pic08.jpg" alt="" />
+                            <h3>Bob's</h3>
+                        </div>
+                    </div>
+                    <div class="6u 6u$(xsmall)">
+                        <div class="image fit captioned">
+                            <img src="images/pic03.jpg" alt="" />
+                            <h3>Santa Serva</h3>
+                        </div>
                     </div>
                 </div>
                 <!--                                <ul class="actions">

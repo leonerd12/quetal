@@ -7,9 +7,14 @@ $sNome = $_POST['sNome'];
 $data = $_POST['aaaa'] . '-' . $_POST['mm'] . '-' . $_POST['dd'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
-$nome = $_POST['nome'];
+//$person = $_POST['person'];
 
-$query = "INSERT INTO usuario (nome, sobrenome, dataNasc, email, senha) VALUES ('$nome', '$sNome', '$data', '$email', '$senha');";
+$gostos = "";
+for ($i = 1; $i < 10; $i++) {
+    $gostos .= $_POST[$i];
+}
+
+$query = "INSERT INTO usuario (nome, sobrenome, dataNasc, email, senha, gostos) VALUES ('$nome', '$sNome', '$data', '$email', '$senha', '$gostos');";
 $result = pg_query($query);
 
 if ($result) {

@@ -15,9 +15,22 @@
 -- nome varchar(50),
 -- sobrenome varchar(50),
 -- dataNasc date,
+-- person int,
+-- gostos varchar(400),
 -- email varchar(100),
 -- senha varchar(100)
 -- );
 
-SELECT * FROM usuario;
+-- CREATE TABLE empresa(
+-- id serial primary key,
+-- nome varchar(100),
+-- tipo int,
+-- carac varchar(400)
+-- );
+
+-- INSERT into empresa (nome, carac) values ('teste5', 'CinemaComidaMusica');
+
+-- DROP table empresa;
+-- SELECT * FROM usuario;
+-- SELECT * FROM empresa where carac like '' ;
 -- DELETE FROM usuario;
