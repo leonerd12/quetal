@@ -29,9 +29,8 @@
             <h1><strong><a href="index.php">Que tal?</a></strong></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="../index/index.php">Home</a></li>
-                    <li><a href="../cadastro/cadastro.php">Cadastrar</a></li>
-                    <li><a href="../index/index.php#four" class="scrolly">Login</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="../index.php#four" class="scrolly">Login</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,60 +46,64 @@
                 <form action="cadastrar.php" method="POST">
                     <div class="container 50%">
                         <div class="row uniform 50%">
-                            <div class="12u$">
+                            <div class="12u">
                                 <input name="nome" placeholder="Nome" type="text" required="required"/>
                             </div>
-                            <div class="12u$">
+                            <div class="12u">
                                 <input name="sNome" placeholder="Sobrenome" type="text"  required="required"/>
                             </div>
-                            <div class="2u 3u(xsmall)">
+                            <div class="4u 4u(xsmall)">
                                 <input name="dd" placeholder="Dia" type="text"  required="required"/>
                             </div>
-                            <div class="2u 3u(xsmall)">
+                            <div class="4u 4u(xsmall)">
                                 <input name="mm" placeholder="Mês" type="text"  required="required"/>
                             </div>
-                            <div class="4u$">
+                            <div class="4u 4u(xsmall)">
                                 <input name="aaaa" placeholder="Ano" type="text"  required="required"/>
                             </div>
-                            <div class="12u$">
+                            <div class="12u">
                                 <input name="email" placeholder="Email" type="email"  required="required"/>
                             </div>
-                            <div class="12u$">
+                            <div class="12u">
                                 <input name="senha" placeholder="Senha" type="password"  required="required"/>
                             </div>
-                            <div class="4u ">
+                        </div>
+                        <div class="row uniform">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g1" name="1" value="1">
                                 <label for="g1">Pipoca</label>
                             </div>
-                            <div class="4u">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g2" name="2" value="2">
                                 <label for="g2">Música</label>
                             </div>
-                            <div class="4u">
+                        </div>
+                        <div class="row uniform">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g3" name="3" value="3">
                                 <label for="g3">Comida</label>
                             </div>
-                            <div class="4u">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g4" name="4" value="4">
                                 <label for="g4">Passeio</label>
                             </div>
-                            <div class="4u">
+                        </div>
+                        <div class="row uniform">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g5" name="5" value="5">
                                 <label for="g5">Bebida</label>
                             </div>
-                            <div class="4u">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g6" name="6" value="6">
                                 <label for="g6">Companhia</label>
                             </div>
-                            <div class="4u">
+                        </div>
+                        <div class="row uniform">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g7" name="7" value="7">
                                 <label for="g7">Festa</label>
                             </div>
-                            <div class="4u">
-                                <input type="checkbox" id="g8" name="8" value="8">
-                                <label for="g8">Fim de Tarde</label>
-                            </div>
-                            <div class="4u">
+                            <div class="6u 6u(small)">
                                 <input type="checkbox" id="g9" name="9" value="9">
                                 <label for="g9">Noite</label>
                             </div>
@@ -118,15 +121,8 @@
         <!-- Footer -->
         <footer id="footer">
             <div class="container">
-                <ul class="icons">
-                    <li><a href="#" class="icon fa-facebook"></a></li>
-                    <li><a href="#" class="icon fa-twitter"></a></li>
-                    <li><a href="#" class="icon fa-instagram"></a></li>
-                </ul>
                 <ul class="copyright">
-                    <li>&copy; Silicius</li>
-                    <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-                    <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+                    <li>&copy; Silicius | <?= date("Y") ?></li>
                 </ul>
             </div>
         </footer>

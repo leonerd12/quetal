@@ -1,3 +1,9 @@
+<?php
+session_start();
+if ($_SESSION["logado"] == null) {
+    header("location: /");
+}
+?>
 <!DOCTYPE HTML>
 <!--
         Spatial by TEMPLATED
@@ -25,48 +31,47 @@
 
         <!-- Header -->
         <header id="header">
-            <h1><strong><a href="index.html">QUE TAL?</a></strong></h1>
+            <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="../principal/principal1.php">Início</a></li>
-                    <li><a href="../conta/conta.php">Conta</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="pesquisa.php">Pesquisar</a></li>
+                    <li><a href="../conta/">Conta</a></li>
+                    <li><a href="../sair/">Logout</a></li>
                 </ul>
             </nav>
-        </header>
-        
-        
+        </header>        
+
         <!-- Two -->
         <section id="two" class="wrapper style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>QUE TAL ...?</h2>
-                    <p>Resultado</p>
+                    <h2>O que você quer fazer?</h2>
+                    <p>O que temos para hoje à noite?</p>
                 </header>
                 <div class="row 150%">
-                    <div class="6u 6u(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic02.jpg" alt="" />
-                            <h3>Restaurante tal</h3>
-                        </div>
+                    <div class="4u 12u(xsmall)">
+                        <a href="resultado.php">                        
+                            <div class="image fit captioned">
+                                <img src="images/pic02.jpg" alt="" />
+                                <h3>Quero sair com os amigos.</h3>
+                            </div>
+                        </a>
                     </div>
-                    <div class="6u 6u$(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic03.jpg" alt="" />
-                            <h3>Pizzaria Trevo</h3>
-                        </div>
+                    <div class="4u 12u(xsmall)">
+                        <a href="resultado.php">                        
+                            <div class="image fit captioned">
+                                <img src="images/pic03.jpg" alt="" />
+                                <h3>Quero sair com boa companhia.</h3>
+                            </div>
+                        </a>
                     </div>
-                    <div class="6u 6u(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic08.jpg" alt="" />
-                            <h3>Bob's</h3>
-                        </div>
-                    </div>
-                    <div class="6u 6u$(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic03.jpg" alt="" />
-                            <h3>Santa Serva</h3>
-                        </div>
+                    <div class="4u 12u(xsmall)">
+                        <a href="resultado.php">                        
+                            <div class="image fit captioned">
+                                <img src="images/pic08.jpg" alt="" />
+                                <h3>Quero sair sozinho.</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <!--                                <ul class="actions">
@@ -94,21 +99,4 @@
             </div>
         </section>-->
 
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="container">
-                <ul class="icons">
-                    <li><a href="#" class="icon fa-facebook"></a></li>
-                    <li><a href="#" class="icon fa-twitter"></a></li>
-                    <li><a href="#" class="icon fa-instagram"></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; Untitled</li>
-                    <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-                    <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-                </ul>
-            </div>
-        </footer>
-
-    </body>
-</html>
+        <?php include_once './footer.php'; ?>

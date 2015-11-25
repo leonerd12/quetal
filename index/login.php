@@ -1,6 +1,6 @@
 <?php
 
-include_once '../DB/conexao.php';
+include_once '../index/DB/conexao.php';
 
 if (empty($_POST['email']) || empty($_POST['senha'])) {
     //Login ou senha em branco
@@ -28,7 +28,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
                 $_SESSION['logado'] = 1;
                 //$_SESSION['hora'] = time();
                 //$_SESSION['tempolimite'] = 600;
-                header("location: ../conta/conta.php");
+                header("location: ../principal/");
                 break;
             } else {
                 //Usuario ou senha invalido

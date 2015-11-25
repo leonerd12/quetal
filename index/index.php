@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION["logado"]) && $_SESSION["logado"] == 1){
+        header("location: /principal/");
+    }
+?>
 <!DOCTYPE HTML>
 <!--
         Spatial by TEMPLATED
@@ -26,11 +32,11 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <h1><strong><a href="index.php">Que tal?</a></strong></h1>
+            <h1><strong><a href="/">Que tal?</a></strong></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="../index/index.php">Home</a></li>
-                    <li><a href="../cadastro/cadastro.php">Cadastrar</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="../cadastro/">Cadastrar</a></li>
                     <li><a href="#four" class="scrolly">Login</a></li>
                 </ul>
             </nav>
@@ -148,23 +154,26 @@
             <div class="inner">
                 <header class="major narrow">
                     <h2>Entrar Agora</h2>
-                    <p>Faça Login e tenha a noite perfeita.</p>
+                    <p>Faça Login e tenha o passeio perfeito.</p>
                 </header>
                 <form action="login.php" method="POST">
                     <div class="container 50%">
                         <div class="row uniform 50%">
-                            <div class="12u$">
+                            <div class="12u">
                                 <input name="email" placeholder="Email" type="text" />
                             </div>
-                            <div class="12u$">
+                            <div class="12u">
                                 <input name="senha" placeholder="Senha" type="password" />
                             </div>
                         </div>
-                    </div><br />
+                    </div>
+                    <br />
+                    <div class="container 50%">
                     <ul class="actions">
                         <li><input type="submit" class="special" value="Login" /></li>
                         <li><input type="reset" class="alt" value="Limpar" /></li>
                     </ul>
+                    </div>
                 </form>
             </div>
         </section>
@@ -178,9 +187,7 @@
                     <li><a href="#" class="icon fa-instagram"></a></li>
                 </ul>
                 <ul class="copyright">
-                    <li>&copy; Silicius</li>
-                    <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-                    <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+                    <li>&copy; Silicius | <?= date("Y")?></li>
                 </ul>
             </div>
         </footer>

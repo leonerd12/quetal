@@ -25,15 +25,15 @@
 
         <!-- Header -->
         <header id="header">
-            <h1><strong><a href="principal.php">QUE TAL?</a></strong></h1>
+            <h1><strong><a href="index.php">QUE TAL?</a></strong></h1>
             <nav id="nav">
                 <ul>
                     <li>                        
                         <form method="post" action="#">
-                            <div class="12u$">
+                            <div class="12u">
                                 <div class="select-wrapper">
                                     <select name="category" id="category">
-                                        <option value="">- Categoria -</option>
+                                        <option value=""> Categoria </option>
                                         <option value="1">Restaurantes</option>
                                         <option value="1">Bares</option>
                                         <option value="1">Baladas</option>
@@ -43,9 +43,9 @@
                             </div>
                         </form>
                     </li>
-                    <li><a href="principal.php">Início</a></li>
-                    <li><a href="../conta/conta.php">Conta</a></li>
-                    <li><a href="logout.php">Logout</a></li>
+                    <li><a href="../principal/">Início</a></li>
+                    <li><a href="../conta/">Conta</a></li>
+                    <li><a href="../sair/">Logout</a></li>
                 </ul>
             </nav>
         </header>
@@ -65,7 +65,7 @@
                             <h3>Restaurante tal</h3>
                         </div>
                     </div>
-                    <div class="6u 6u$(xsmall)">
+                    <div class="6u 6u(xsmall)">
                         <div class="image fit captioned">
                             <img src="images/pic03.jpg" alt="" />
                             <h3>Pizzaria Trevo</h3>
@@ -77,7 +77,7 @@
                             <h3>Bob's</h3>
                         </div>
                     </div>
-                    <div class="6u 6u$(xsmall)">
+                    <div class="6u 6u(xsmall)">
                         <div class="image fit captioned">
                             <img src="images/pic03.jpg" alt="" />
                             <h3>Santa Serva</h3>
@@ -109,21 +109,4 @@
             </div>
         </section>-->
 
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="container">
-                <ul class="icons">
-                    <li><a href="#" class="icon fa-facebook"></a></li>
-                    <li><a href="#" class="icon fa-twitter"></a></li>
-                    <li><a href="#" class="icon fa-instagram"></a></li>
-                </ul>
-                <ul class="copyright">
-                    <li>&copy; Untitled</li>
-                    <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-                    <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
-                </ul>
-            </div>
-        </footer>
-
-    </body>
-</html>
+        <?php include_once './footer.php'; ?>
