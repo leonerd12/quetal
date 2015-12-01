@@ -5,6 +5,7 @@ if ($_SESSION["logado"] == null) {
 }
 
 $f1 = $_GET['f1'];
+$f2 = $_GET['f2'];
 
 ?>
 <!DOCTYPE HTML>
@@ -48,31 +49,31 @@ $f1 = $_GET['f1'];
         <section id="two" class="wrapper style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>Quanto podemos gastar hoje?</h2>
+                    <h2>Quantas sugestões você deseja?</h2>
                     <p>Selecione a melhor opção!</p>
                 </header>
                 <div class="row 150%">
                     <div class="4u 12u(xsmall)">
-                        <a href="filtro3.php?f1=<?= $f1?>&f2=4">                        
+                        <a href="resultado.php?f1=<?= $f1?>&f2=<?= $f2?>&f3=1">                        
                             <div class="image fit captioned">
                                 <img src="images/pic02.jpg" alt="" />
-                                <h3>O valor não importa.</h3>
+                                <h3>1 SUGESTÃO</h3>
                             </div>
                         </a>
                     </div>
                     <div class="4u 12u(xsmall)">
-                        <a href="filtro3.php?f1=<?= $f1?>&f2=5">                        
+                        <a href="resultado.php?f1=<?= $f1?>&f2=<?= $f2?>&f3=2">                        
                             <div class="image fit captioned">
                                 <img src="images/pic03.jpg" alt="" />
-                                <h3>Tô com pouca grana hoje :(</h3>
+                                <h3>2 SUGESTÕES</h3>
                             </div>
                         </a>
                     </div>
                     <div class="4u 12u(xsmall)">
-                        <a href="filtro3.php?f1=<?= $f1?>&f2=6">                        
+                        <a href="resultado.php?f1=<?= $f1?>&f2=<?= $f2?>&f3=3">                        
                             <div class="image fit captioned">
                                 <img src="images/pic08.jpg" alt="" />
-                                <h3>Posso gastar um pouco mais :)</h3>
+                                <h3>3 SUGESTÕES</h3>
                             </div>
                         </a>
                     </div>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION["logado"] == null) {
-    header("location: /");
+    header("location: /quetal/index/");
 }
 ?>
 <!DOCTYPE HTML>
