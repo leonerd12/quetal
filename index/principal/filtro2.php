@@ -1,8 +1,11 @@
 <?php
 session_start();
 if ($_SESSION["logado"] == null) {
-    header("location: /");
+    header("location: /quetal/index/");
 }
+
+$f1 = $_GET['f1'];
+
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -45,31 +48,31 @@ if ($_SESSION["logado"] == null) {
         <section id="two" class="wrapper style2 special">
             <div class="container">
                 <header class="major">
-                    <h2>O que você quer fazer?</h2>
-                    <p>O que temos para hoje à noite?</p>
+                    <h2>Quanto podemos gastar hoje?</h2>
+                    <p>Selecione a melhor opção!</p>
                 </header>
                 <div class="row 150%">
                     <div class="4u 12u(xsmall)">
-                        <a href="filtro2.php?f1=1">                        
+                        <a href="resultado.php?f1=<?= $f1?>&f2=4">                        
                             <div class="image fit captioned">
                                 <img src="images/pic02.jpg" alt="" />
-                                <h3>Quero sair com os amigos.</h3>
+                                <h3>O valor não importa.</h3>
                             </div>
                         </a>
                     </div>
                     <div class="4u 12u(xsmall)">
-                        <a href="filtro2.php?f1=2">                        
+                        <a href="resultado.php?f1=<?= $f1?>&f2=5">                        
                             <div class="image fit captioned">
                                 <img src="images/pic03.jpg" alt="" />
-                                <h3>Quero sair com boa companhia.</h3>
+                                <h3>Tô com pouca grana hoje :(</h3>
                             </div>
                         </a>
                     </div>
                     <div class="4u 12u(xsmall)">
-                        <a href="filtro2.php?f1=3">                        
+                        <a href="resultado.php?f1=<?= $f1?>&f2=6">                        
                             <div class="image fit captioned">
                                 <img src="images/pic08.jpg" alt="" />
-                                <h3>Quero sair sozinho.</h3>
+                                <h3>Posso gastar um pouco mais :)</h3>
                             </div>
                         </a>
                     </div>

@@ -1,97 +1,55 @@
-<!DOCTYPE HTML>
-<!--
-        Spatial by TEMPLATED
-        templated.co @templatedco
-        Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-    <head>
-        <title>QUE TAL? By Silicius</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/skel.min.js"></script>
-        <script src="js/skel-layers.min.js"></script>
-        <script src="js/init.js"></script>
-        <noscript>
-        <link rel="stylesheet" href="css/skel.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/style-xlarge.css" />
-        </noscript>
-    </head>
-    <body>
+<?php
 
-        <!-- Header -->
-        <header id="header">
-            <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
-            <nav id="nav">
-                <ul>
-                    <li><a href="../principal/">Início</a></li>
-                    <li><a href="../conta/">Conta</a></li>
-                    <li><a href="../sair/">Logout</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        
-        <!-- Two -->
-        <section id="two" class="wrapper style2 special">
-            <div class="container">
-                <header class="major">
-                    <h2>QUE TAL ...?</h2>
-                    <p>Resultado</p>
-                </header>
-                <div class="row 150%">
-                    <div class="6u 6u(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic02.jpg" alt="" />
-                            <h3>Restaurante tal</h3>
-                        </div>
-                    </div>
-                    <div class="6u 6u(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic03.jpg" alt="" />
-                            <h3>Pizzaria Trevo</h3>
-                        </div>
-                    </div>
-                    <div class="6u 6u(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic08.jpg" alt="" />
-                            <h3>Bob's</h3>
-                        </div>
-                    </div>
-                    <div class="6u 6u(xsmall)">
-                        <div class="image fit captioned">
-                            <img src="images/pic03.jpg" alt="" />
-                            <h3>Santa Serva</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--                                <ul class="actions">
-                                                        <li><a href="#" class="button special big">Nulla luctus</a></li>
-                                                        <li><a href="#" class="button big">Sed vulputate</a></li>
-                                                </ul>-->
-            </div>
-        </section>
+session_start();
 
+$f1 = $_GET['f1'];
+$f2 = $_GET['f2'];
+echo "filtro: " . $f1 . " | filtro: " . $f2 . "<br/>";
 
-        <!-- Main -->
-<!--        <section id="main" class="wrapper">
-            <div class="container">
+include_once '../DB/conexao.php';
 
-                <header class="major special">
-                    <h2>Generic</h2>
-                    <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-                </header>
+$query = "SELECT empresa.id, empresa.nome, empresa.tipo FROM fil_emp inner join empresa on empresa.id = fil_emp.id_emp WHERE id_fil = $f1 OR id_fil = $f2 GROUP BY (empresa.id) HAVING COUNT(empresa.id)>1 ORDER by empresa.nome;";
+echo "Filtragem: <br/>";
+$result = pg_query($query);
+$i = 0;
+while ($linha = pg_fetch_assoc($result)) {
+    echo $linha['id'] . " - " . $linha['nome'] . " - " . $linha['tipo'] . "<br/>";
+    $id = $linha['id'];
+    $nome = $linha['nome'];
+    $tipo = $linha['tipo'];
+    $empresa[$i] = array($id, $nome, $tipo);
+    $i++;
+}
 
-                <a href="#" class="image fit"><img src="images/pic01.jpg" alt="" /></a>
-                <p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan.</p>
-                <p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan commodo odio cubilia ac eu interdum placerat placerat arcu commodo lobortis adipiscing semper ornare pellentesque.</p>
-                <p>Amet nibh adipiscing adipiscing. Commodo ante vis placerat interdum massa massa primis. Tempus condimentum tempus non ac varius cubilia adipiscing placerat lorem turpis at. Aliquet lorem porttitor interdum. Amet lacus. Aliquam lobortis faucibus blandit ac phasellus. In amet magna non interdum volutpat porttitor metus a ante ac neque. Nisi turpis. Commodo col. Interdum adipiscing mollis ut aliquam id ante adipiscing commodo integer arcu amet blandit adipiscing arcu ante.</p>
+//for ($x = 0; $x < count($empresa); $x++) {
+//    echo $empresa[$x][1] . "<hr>";
+//}
 
-            </div>
-        </section>-->
+do {
+        $a = rand(1, 100);
+        $b = rand(1, 100);
+        $c = rand(1, 100);
+    if ($a != $b && $a != $c && $b != $c) {
+        for ($x = 0; $x < count($empresa); $x++) {
+            if ($empresa[$x][0] == $a) {
+                $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+            }
+        }
+        for ($x = 0; $x < count($empresa); $x++) {
+            if ($empresa[$x][0] == $b) {
+                $e2 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+            }
+        }
+        for ($x = 0; $x < count($empresa); $x++) {
+            if ($empresa[$x][0] == $c) {
+                $e3 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+            }
+        }
+    }
+} while (!isset($e1) || !isset($e2) || !isset($e3) || $e1[2] == $e2[2] || $e1[2] == $e3[2] || $e2[2] == $e3[2]);
 
-        <?php include_once './footer.php'; ?>
+echo 'Resultado<br>';
+echo $e1[2] . " - " . $e1[1] . " | " . $e2[2] . " - ". $e2[1] . " | " . $e3[2] . " - " . $e3[1];
+
+pg_close($link);
+?>

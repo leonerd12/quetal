@@ -11,7 +11,7 @@
 --        CONNECTION LIMIT = -1;
 
 -- CREATE TABLE usuario(
--- id serial primary key,
+-- id serial PRIMARY KEY,
 -- nome varchar(50),
 -- sobrenome varchar(50),
 -- dataNasc date,
@@ -20,13 +20,24 @@
 -- );
 -- 
 -- CREATE TABLE empresa(
--- id serial primary key,
+-- id serial PRIMARY KEY,
 -- nome varchar(100),
--- tipo int
+-- tipo varchar(50),
 -- );
+
 -- 
+-- INSERT INTO empresa (nome, tipo) VALUES ('papito', 'restaurante');
+-- INSERT INTO empresa (nome, tipo) VALUES ('sorelle', 'pizzaria');
+-- INSERT INTO empresa (nome, tipo) VALUES ('cine super k', 'cinema');
+-- INSERT INTO empresa (nome, tipo) VALUES ('cachaçaria', 'restaurante');
+-- INSERT INTO empresa (nome, tipo) VALUES ('cine araujo', 'cinema');
+-- INSERT INTO empresa (nome, tipo) VALUES ('santa cerva', 'balada');
+-- INSERT INTO empresa (nome, tipo) VALUES ('opium motel', 'motel');
+-- INSERT INTO empresa (nome, tipo) VALUES ('x.com', 'pizzaria');
+-- 
+
 -- CREATE TABLE interesse(
--- id serial primary key,
+-- id serial PRIMARY KEY,
 -- tipo varchar(50)
 -- );
 -- 
@@ -44,18 +55,108 @@
 -- 
 -- 
 -- CREATE TABLE us_int(
--- id serial primary key,
--- id_us int references usuario(id) ON DELETE CASCADE,
--- id_int int references interesse(id) ON DELETE CASCADE
+-- id serial PRIMARY KEY,
+-- id_us int REFERENCES usuario(id) ON DELETE CASCADE,
+-- id_int int REFERENCES interesse(id) ON DELETE CASCADE
 -- );
 -- 
 -- CREATE TABLE emp_int(
--- id serial primary key,
--- id_emp int references empresa(id) ON DELETE CASCADE,
--- id_int int references interesse(id) ON DELETE CASCADE
+-- id serial PRIMARY KEY,
+-- id_emp int REFERENCES empresa(id) ON DELETE CASCADE,
+-- id_int int REFERENCES interesse(id) ON DELETE CASCADE
 -- );
 
+
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (1,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (1,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (2,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (2,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (3,1);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (3,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (3,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (4,2);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (4,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (4,5);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (4,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (4,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (4,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (5,1);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (5,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (5,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (6,2);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (6,5);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (6,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (6,7);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (6,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (7,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (7,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (8,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (8,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (8,9);
+-- 
+-- 
+-- CREATE TABLE filtro(
+-- id serial PRIMARY KEY,
+-- n_filtro int,
+-- nome varchar(50),
+-- valor int
+-- );
+-- 
+-- INSERT INTO filtro (n_filtro, nome, valor) VALUES (1,'companhia/amigos',1);
+-- INSERT INTO filtro (n_filtro, nome, valor) VALUES (1,'companhia/aDois',2);
+-- INSERT INTO filtro (n_filtro, nome, valor) VALUES (1,'companhia/sozinho',3);
+-- INSERT INTO filtro (n_filtro, nome, valor) VALUES (2,'financeiro/qualquer',1);
+-- INSERT INTO filtro (n_filtro, nome, valor) VALUES (2,'financeiro/barato',2);
+-- INSERT INTO filtro (n_filtro, nome, valor) VALUES (2,'financeiro/caro',3);
+
+-- 
+-- CREATE TABLE fil_emp(
+-- id serial PRIMARY KEY,
+-- id_fil int REFERENCES filtro(id) ON DELETE CASCADE,
+-- id_emp int REFERENCES empresa(id) ON DELETE CASCADE
+-- );
+-- 
+-- 
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (1,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (1,3);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (1,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (1,5);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (2,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (2,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (2,3);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (2,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (2,6);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (3,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (3,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (3,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (3,6);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (4,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (4,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (4,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (4,6);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (5,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (5,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (5,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (5,5);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (6,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (6,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (6,3);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (6,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (6,6);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (7,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (7,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (7,5);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (8,1);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (8,2);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (8,3);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (8,4);
+-- INSERT INTO fil_emp (id_emp, id_fil) VALUES (8,6);
+
+
 -- DROP TABLE usuario, empresa, interesse, us_int, emp_int;
-SELECT * FROM us_int;
+SELECT * FROM empresa;
+-- SELECT * FROM fil_emp inner join empresa on empresa.id = fil_emp.id_emp where id_fil = 1 OR id_fil = 2;
+-- SELECT * FROM fil_emp inner join filtro on filtro.id = fil_emp.id_fil inner join empresa on empresa.id = fil_emp.id_emp;
+-- SELECT DISTINCT empresa.nome, empresa.tipo FROM empresa INNER JOIN emp_int ON empresa.id = emp_int.id_emp INNER JOIN interesse ON interesse.id = emp_int.id_int inner join fil_emp on empresa.id = fil_emp.id_emp inner join filtro on filtro.id = fil_emp.id_fil WHERE interesse.id = 3;
 -- SELECT * FROM empresa where carac like '' ;
 -- DELETE FROM usuario where id=3;

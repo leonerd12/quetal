@@ -27,7 +27,7 @@ for ($i = 1; $i < 10; $i++) {
 
 
 if ($result1 && $result2) {
-    header("location: ../index/index.php#four");
+    header("location: ../");
 } else {
     header("location: cadastro.php");
         echo pg_errormessage($link);

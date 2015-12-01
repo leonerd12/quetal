@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION["logado"]) && $_SESSION["logado"] == 1){
-        header("location: /principal/");
+        header("location: quetal/principal/");
     }
 ?>
 <!DOCTYPE HTML>
@@ -36,7 +36,7 @@
             <nav id="nav">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="../cadastro/">Cadastrar</a></li>
+                    <li><a href="cadastro/">Cadastrar</a></li>
                     <li><a href="#four" class="scrolly">Login</a></li>
                 </ul>
             </nav>
