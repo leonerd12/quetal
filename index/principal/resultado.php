@@ -1,27 +1,28 @@
 <?php
-
 session_start();
 
 $f1 = $_GET['f1'];
 $f2 = $_GET['f2'];
 $f3 = $_GET['f3'];
-echo "filtro: " . $f1 . " | filtro: " . $f2 . "<br/>";
+$array_resultado = array();
+//echo "filtro: " . $f1 . " | filtro: " . $f2 . "<br/>";
 
 include_once '../DB/conexao.php';
 
-$query = "SELECT empresa.id, empresa.nome, empresa.tipo FROM fil_emp inner join empresa on empresa.id = fil_emp.id_emp WHERE id_fil = $f1 OR id_fil = $f2 GROUP BY (empresa.id) HAVING COUNT(empresa.id)>1 ORDER by empresa.nome;";
-echo "Filtragem: <br/>";
+$query = "SELECT a.id, a.nome, a.tipo, a.image_path FROM fil_emp b inner join empresa a on a.id = b.id_emp WHERE b.id_fil = $f1 OR b.id_fil = $f2 GROUP BY (a.id) HAVING COUNT(a.id)>1 ORDER by a.nome;";
+//echo "Filtragem: <br/>";
 $result = pg_query($query);
 $i = 0;
 while ($linha = pg_fetch_assoc($result)) {
-    echo $linha['id'] . " - " . $linha['nome'] . " - " . $linha['tipo'] . "<br/>";
+//    echo $linha['id'] . " - " . $linha['nome'] . " - " . $linha['tipo'] . "<br/>";
     $id = $linha['id'];
     $nome = $linha['nome'];
     $tipo = $linha['tipo'];
-    $empresa[$i] = array($id, $nome, $tipo);
+    $imagem = $linha['image_path'];
+    $empresa[$i] = array($id, $nome, $tipo, $imagem);
     $i++;
 }
-
+//die();
 //for ($x = 0; $x < count($empresa); $x++) {
 //    echo $empresa[$x][1] . "<hr>";
 //}
@@ -30,14 +31,14 @@ if ($f3 == 1) {
         $a = rand(1, 100);
         for ($x = 0; $x < count($empresa); $x++) {
             if ($empresa[$x][0] == $a) {
-                $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+                $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2], $empresa[$x][3]);
             }
         }
     } while (!isset($e1));
+    array_push($array_resultado, $e1);
 
-    echo '<br><hr>Resultado<br>';
-    echo $e1[2] . " - <b>" . $e1[1] . "</b> | ";
-    
+//    echo '<br><hr>Resultado<br>';
+//    echo $e1[2] . " - <b>" . $e1[1] . "</b> | ";
 } else if ($f3 == 2) {
     do {
         $a = rand(1, 100);
@@ -45,21 +46,22 @@ if ($f3 == 1) {
         if ($a != $b) {
             for ($x = 0; $x < count($empresa); $x++) {
                 if ($empresa[$x][0] == $a) {
-                    $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+                    $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2], $empresa[$x][3]);
                 }
             }
             for ($x = 0; $x < count($empresa); $x++) {
                 if ($empresa[$x][0] == $b) {
-                    $e2 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+                    $e2 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2], $empresa[$x][3]);
                 }
             }
         }
     } while (!isset($e1) || !isset($e2) || $e1[2] == $e2[2]);
+    array_push($array_resultado, $e1);
+    array_push($array_resultado, $e2);
 
 
-    echo '<br><hr>Resultado<br>';
-    echo $e1[2] . " - <b>" . $e1[1] . "</b> | " . $e2[2] . " - <b>" . $e2[1] . "</b> | ";
-    
+//    echo '<br><hr>Resultado<br>';
+//    echo $e1[2] . " - <b>" . $e1[1] . "</b> | " . $e2[2] . " - <b>" . $e2[1] . "</b> | ";
 } else if ($f3 == 3) {
     do {
         $a = rand(1, 100);
@@ -68,25 +70,78 @@ if ($f3 == 1) {
         if ($a != $b && $a != $c && $b != $c) {
             for ($x = 0; $x < count($empresa); $x++) {
                 if ($empresa[$x][0] == $a) {
-                    $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+                    $e1 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2], $empresa[$x][3]);
                 }
             }
             for ($x = 0; $x < count($empresa); $x++) {
                 if ($empresa[$x][0] == $b) {
-                    $e2 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+                    $e2 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2], $empresa[$x][3]);
                 }
             }
             for ($x = 0; $x < count($empresa); $x++) {
                 if ($empresa[$x][0] == $c) {
-                    $e3 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2]);
+                    $e3 = array($empresa[$x][0], $empresa[$x][1], $empresa[$x][2], $empresa[$x][3]);
                 }
             }
         }
     } while (!isset($e1) || !isset($e2) || !isset($e3) || $e1[2] == $e2[2] || $e1[2] == $e3[2] || $e2[2] == $e3[2]);
 
-    echo '<br><hr>Resultado<br>';
-    echo $e1[2] . " - <b>" . $e1[1] . "</b> | " . $e2[2] . " - <b>" . $e2[1] . "</b> | " . $e3[2] . " - <b>" . $e3[1];
+    array_push($array_resultado, $e1);
+    array_push($array_resultado, $e2);
+    array_push($array_resultado, $e3);
+//    echo '<br><hr>Resultado<br>';
+//    echo $e1[2] . " - <b>" . $e1[1] . "</b> | " . $e2[2] . " - <b>" . $e2[1] . "</b> | " . $e3[2] . " - <b>" . $e3[1];
 }
 
 pg_close($link);
+//var_dump($array_resultado);
+//die();
 ?>
+<?php include_once './top.php';?>
+
+        <!-- Header -->
+        <header id="header">
+            <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
+            <nav id="nav">
+                <ul>
+                    <li class="hidden-lg hidden-md"><strong><a href="index.php">QUE TAL?</a></strong></li>
+                    <li><a href="pesquisa.php">Pesquisar</a></li>
+                    <li><a href="../conta/">Conta</a></li>
+                    <li><a href="../sair/">Logout</a></li>
+                </ul>
+            </nav>
+        </header>        
+
+        <!-- Two -->
+        <section id="two" class="wrapper style2 special">
+            <div class="container">
+                <header class="hidden-sm hidden-xs major">
+                    <h2>Sugestões</h2>
+                    <p>Selecione a melhor opção!</p>
+                </header>
+                <header class="hidden-lg hidden-md">
+                    <h2>Sugestões</h2>
+                    <p>Selecione a melhor opção!</p>
+                </header>
+                <div class="row">
+                    <?php for ($i = 0; $i < $f3; $i++): ?>
+                        <div class="col-md-4 col-sm-12">
+                            <a href="#">                        
+                                <div class="image fit captioned">
+                                    <img src="<?= $array_resultado[$i][3]?>" alt="" />
+                                    <h3>
+                                        <?= $array_resultado[$i][2] ?>
+                                        <br />
+                                        <br />
+                                        <?= $array_resultado[$i][1] ?>
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </section>
+
+
+        <?php include_once './footer.php'; ?>
