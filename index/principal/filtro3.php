@@ -14,7 +14,7 @@ $f2 = $_GET['f2'];
     <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
     <nav id="nav">
         <ul>
-            <li><a href="pesquisa.php">Pesquisar</a></li>
+            <!--<li><a href="pesquisa.php">Pesquisar</a></li>-->
             <li><a href="../conta/">Conta</a></li>
             <li><a href="../sair/">Logout</a></li>
         </ul>
@@ -32,7 +32,7 @@ $f2 = $_GET['f2'];
             <div class="col-md-4 col-sm-12">
                 <a href="resultado.php?f1=<?= $f1 ?>&f2=<?= $f2 ?>&f3=1">                        
                     <div class="image fit captioned">
-                        <img src="images/pic02.jpg" alt="" />
+                        <img src="images/um.jpg" alt="" />
                         <h3>1 SUGESTÃO</h3>
                     </div>
                 </a>
@@ -40,7 +40,7 @@ $f2 = $_GET['f2'];
             <div class="col-md-4 col-sm-12">
                 <a href="resultado.php?f1=<?= $f1 ?>&f2=<?= $f2 ?>&f3=2">                        
                     <div class="image fit captioned">
-                        <img src="images/pic03.jpg" alt="" />
+                        <img src="images/dois.jpg" alt="" />
                         <h3>2 SUGESTÕES</h3>
                     </div>
                 </a>
@@ -48,7 +48,7 @@ $f2 = $_GET['f2'];
             <div class="col-md-4 col-sm-12">
                 <a href="resultado.php?f1=<?= $f1 ?>&f2=<?= $f2 ?>&f3=3">                        
                     <div class="image fit captioned">
-                        <img src="images/pic08.jpg" alt="" />
+                        <img src="images/tres.jpg" alt="" />
                         <h3>3 SUGESTÕES</h3>
                     </div>
                 </a>

@@ -105,7 +105,7 @@ pg_close($link);
             <nav id="nav">
                 <ul>
                     <li class="hidden-lg hidden-md"><strong><a href="index.php">QUE TAL?</a></strong></li>
-                    <li><a href="pesquisa.php">Pesquisar</a></li>
+                    <!--<li><a href="pesquisa.php">Pesquisar</a></li>-->
                     <li><a href="../conta/">Conta</a></li>
                     <li><a href="../sair/">Logout</a></li>
                 </ul>
@@ -123,16 +123,13 @@ pg_close($link);
                     <h2>Sugestões</h2>
                     <p>Selecione a melhor opção!</p>
                 </header>
-                <div class="row">
+                <div class="row text-center">
                     <?php for ($i = 0; $i < $f3; $i++): ?>
                         <div class="col-md-4 col-sm-12">
                             <a href="#">                        
                                 <div class="image fit captioned">
                                     <img src="<?= $array_resultado[$i][3]?>" alt="" />
                                     <h3>
-                                        <?= $array_resultado[$i][2] ?>
-                                        <br />
-                                        <br />
                                         <?= $array_resultado[$i][1] ?>
                                     </h3>
                                 </div>
@@ -140,6 +137,16 @@ pg_close($link);
                         </div>
                     <?php endfor; ?>
                 </div>
+                <div class="container 100%">
+                        <div class="row uniform 50%">
+                            <div class="6u">
+                                <a href="#" ><button class="button special btn-lg form-control">Adorei as sugetões!</button></a>
+                            </div>
+                            <div class="6u">
+                                <a href="#" ><button class="button btn-lg form-control">Não Gostei das sugestões!</button></a>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </section>
 

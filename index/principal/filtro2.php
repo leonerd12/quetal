@@ -13,7 +13,7 @@ $f1 = $_GET['f1'];
     <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
     <nav id="nav">
         <ul>
-            <li><a href="pesquisa.php">Pesquisar</a></li>
+            <!--<li><a href="pesquisa.php">Pesquisar</a></li>-->
             <li><a href="../conta/">Conta</a></li>
             <li><a href="../sair/">Logout</a></li>
         </ul>
@@ -31,7 +31,7 @@ $f1 = $_GET['f1'];
             <div class="col-md-4 col-sm-12">
                 <a href="filtro3.php?f1=<?= $f1 ?>&f2=4">                        
                     <div class="image fit captioned">
-                        <img src="images/pic02.jpg" alt="" />
+                        <img src="images/tantofaz.jpg" alt="" />
                         <h3>O valor não importa.</h3>
                     </div>
                 </a>
@@ -39,7 +39,7 @@ $f1 = $_GET['f1'];
             <div class="col-md-4 col-sm-12">
                 <a href="filtro3.php?f1=<?= $f1 ?>&f2=5">                        
                     <div class="image fit captioned">
-                        <img src="images/pic03.jpg" alt="" />
+                        <img src="images/menosdinheiro.jpg" alt="" />
                         <h3>Tô com pouca grana hoje :(</h3>
                     </div>
                 </a>
@@ -47,7 +47,7 @@ $f1 = $_GET['f1'];
             <div class="col-md-4 col-sm-12">
                 <a href="filtro3.php?f1=<?= $f1 ?>&f2=6">                        
                     <div class="image fit captioned">
-                        <img src="images/pic08.jpg" alt="" />
+                        <img src="images/maisdinheiro.jpg" alt="" />
                         <h3>Posso gastar um pouco mais :)</h3>
                     </div>
                 </a>

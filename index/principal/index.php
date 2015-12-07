@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION["logado"] == null) {
-    header("location: /");
+    header("location: ../");
 }
 ?>
 
@@ -31,7 +31,7 @@ if ($_SESSION["logado"] == null) {
             <div class="col-md-4 col-sm-12">
                 <a href="filtro2.php?f1=1">                        
                     <div class="image fit captioned">
-                        <img src="images/pic02.jpg" alt="" />
+                        <img src="images/amigos.jpg" alt="" />
                         <h3>Quero sair com os amigos.</h3>
                     </div>
                 </a>
@@ -39,7 +39,7 @@ if ($_SESSION["logado"] == null) {
             <div class="col-md-4 col-sm-12">
                 <a href="filtro2.php?f1=2">                        
                     <div class="image fit captioned">
-                        <img src="images/pic03.jpg" alt="" />
+                        <img src="images/companhia.jpg" alt="" />
                         <h3>Quero sair com boa companhia.</h3>
                     </div>
                 </a>
@@ -47,7 +47,7 @@ if ($_SESSION["logado"] == null) {
             <div class="col-md-4 col-sm-12">
                 <a href="filtro2.php?f1=3">                        
                     <div class="image fit captioned">
-                        <img src="images/pic08.jpg" alt="" />
+                        <img src="images/sozinho.jpg" alt="" />
                         <h3>Quero sair sozinho.</h3>
                     </div>
                 </a>
