@@ -12,12 +12,13 @@
 -->
 <html>
     <head>
-        <title>QUE TAL? by Silicius</title>
+        <title>QUE TAL?</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
         <script src="js/jquery.min.js"></script>
+        <script src="js/mod.js"></script>
         <script src="js/skel.min.js"></script>
         <script src="js/skel-layers.min.js"></script>
         <script src="js/init.js"></script>
@@ -109,22 +110,22 @@
                     <h2>Entrar Agora</h2>
                     <p>Faça Login e tenha o passeio perfeito.</p>
                 </header>
-                <form action="login.php" method="POST">
+                <form action="#">
                     <div class="container 50%">
                         <div class="row uniform 50%">
                             <div class="12u">
-                                <input name="email" placeholder="Email" type="text" />
+                                <input id="emailInput" name="email" placeholder="Email" type="text" />
                             </div>
                             <div class="12u">
-                                <input name="senha" placeholder="Senha" type="password" />
+                                <input id="senhaInput" name="senha" placeholder="Senha" type="password" />
                             </div>
                         </div>
                     </div>
                     <br />
                     <div class="container 50%">
                     <ul class="actions">
-                        <li><input type="submit" class="special" value="Login" /></li>
-                        <li><input type="reset" class="alt" value="Limpar" /></li>
+                        <li><button type="button" id="logarbtn" class="button small special" >Login</button></li>
+                        <li><button type="button" id="limparbtn" class="button alt">Limpar</button></li>
                     </ul>
                     </div>
                 </form>

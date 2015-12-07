@@ -6,13 +6,14 @@
 -->
 <html>
     <head>
-        <title>QUE TAL? by Silicius</title>
+        <title>QUE TAL?</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
         <script src="js/jquery.min.js"></script>
         <script src="js/skel.min.js"></script>
+        <script src="js/mod.js"></script>
         <script src="js/skel-layers.min.js"></script>
         <script src="js/init.js"></script>
 
@@ -47,25 +48,25 @@
                     <div class="container 50%">
                         <div class="row uniform 50%">
                             <div class="12u">
-                                <input name="nome" placeholder="Nome" type="text" required="required"/>
+                                <input name="nome" id="nomeInput" placeholder="Nome" type="text" required="required"/>
                             </div>
                             <div class="12u">
-                                <input name="sNome" placeholder="Sobrenome" type="text"  required="required"/>
+                                <input name="sNome" id="snomeInput" placeholder="Sobrenome" type="text"  required="required"/>
                             </div>
                             <div class="4u 4u(xsmall)">
-                                <input name="dd" placeholder="Dia" type="text"  required="required"/>
+                                <input name="dd" id="diaInput" placeholder="Dia" type="text"  required="required"/>
                             </div>
                             <div class="4u 4u(xsmall)">
-                                <input name="mm" placeholder="Mês" type="text"  required="required"/>
+                                <input name="mm" id="mesInput" placeholder="Mês" type="text"  required="required"/>
                             </div>
                             <div class="4u 4u(xsmall)">
-                                <input name="aaaa" placeholder="Ano" type="text"  required="required"/>
+                                <input name="aaaa" id="anoInput" placeholder="Ano" type="text"  required="required"/>
                             </div>
                             <div class="12u">
-                                <input name="email" placeholder="Email" type="email"  required="required"/>
+                                <input name="email" id="ecadInput" placeholder="Email" type="email"  required="required"/>
                             </div>
                             <div class="12u">
-                                <input name="senha" placeholder="Senha" type="password"  required="required"/>
+                                <input name="senha" id="scadInput" placeholder="Senha" type="password"  required="required"/>
                             </div>
                         </div>
                         <div class="row uniform">
@@ -111,8 +112,8 @@
                     </div>
                     <br />
                     <ul class="actions">
-                        <li><input type="submit" class="special" value="Cadastrar" /></li>
-                        <li><input type="reset" class="alt" value="Limpar" /></li>
+                        <li><button type="button" id="cadbtn" class="button special">Cadastrar</button></li>
+                        <li><button type="button" id="limpcadbtn" class="button alt">Limpar</button></li>
                     </ul>
                 </form>
             </div>

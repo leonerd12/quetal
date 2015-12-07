@@ -12,12 +12,12 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
     $senha = $_POST['senha'];
 
 
-    $query = "SELECT * FROM usuario;";
+    $query = "SELECT * FROM usuario WHERE email = '$email';";
     $result = pg_query($query);
 
     if (pg_num_rows($result) > 0) {
         while ($linha = pg_fetch_assoc($result)) {
-            if ($senha == $linha['senha'] && $email == $linha['email']) {
+            if ($senha == $linha['senha']) {
                 //Acesso Permitido
                 session_start();
                 $_SESSION['id'] = $linha['id'];
@@ -26,21 +26,22 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
                 $_SESSION['email'] = $linha['email'];
                 $_SESSION['senha'] = $linha['senha'];
                 $_SESSION['logado'] = 1;
+                echo json_encode(array("sucesso" => true),JSON_FORCE_OBJECT);
                 //$_SESSION['hora'] = time();
                 //$_SESSION['tempolimite'] = 600;
-                header("location: principal/");
-                break;
+//                header("location: principal/");
+//                break;
             } else {
                 //Usuario ou senha invalido
                 //header("location:index.php#four");
-                echo pg_errormessage($link);
+                echo json_encode(array("sucesso" => false, "erroSenha" => true));
+//                echo pg_errormessage($link);
             }
         }
     } else {
         //header("location: index.php?evento=6#cadastro");
-        echo pg_errormessage($link);
+        echo json_encode(array("sucesso" => false, "noMail" => true), JSON_FORCE_OBJECT);
+//        echo pg_errormessage($link);
     }
 }
-
 pg_close($link);
-?>
