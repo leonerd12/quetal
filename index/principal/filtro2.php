@@ -10,10 +10,9 @@ $f1 = $_GET['f1'];
 
 <!-- Header -->
 <header id="header">
-    <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
+    <h1><a href="">QUE TAL?</a></h1>
     <nav id="nav">
         <ul>
-            <!--<li><a href="pesquisa.php">Pesquisar</a></li>-->
             <li><a href="../conta/">Conta</a></li>
             <li><a href="../sair/">Logout</a></li>
         </ul>

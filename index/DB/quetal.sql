@@ -316,8 +316,8 @@
 -- SELECT * FROM fil_emp inner join empresa on empresa.id = fil_emp.id_emp where id_fil = 1 OR id_fil = 2;
 -- SELECT * FROM fil_emp inner join filtro on filtro.id = fil_emp.id_fil inner join empresa on empresa.id = fil_emp.id_emp;
 -- SELECT DISTINCT empresa.nome, empresa.tipo FROM empresa INNER JOIN emp_int ON empresa.id = emp_int.id_emp INNER JOIN interesse ON interesse.id = emp_int.id_int inner join fil_emp on empresa.id = fil_emp.id_emp inner join filtro on filtro.id = fil_emp.id_fil WHERE interesse.id = 3;
-SELECT * FROM usuario ;
--- DELETE FROM usuario where id=3;
+SELECT * FROM usuario;
+-- SELECT A.nome, C.tipo FROM empresa A INNER JOIN emp_int B ON A.id = B.id_emp INNER JOIN interesse C ON C.id = B.id_int WHERE C.id IN (SELECT A.id FROM interesse A INNER JOIN us_int B ON A.id = B.id_int INNER JOIN usuario C ON C.id = B.id_us WHERE C.id = 6);
 
 -- ALTER TABLE empresa ADD COLUMN image_path VARCHAR(255) NOT NULL DEFAULT '';
 

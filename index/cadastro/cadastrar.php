@@ -13,6 +13,7 @@ $result = pg_query($query);
 
 if (pg_num_rows($result) > 0) {
     echo json_encode(array("sucesso" => false, "mailError" => true), JSON_FORCE_OBJECT);
+    return false;
 } else {
     $query1 = "INSERT INTO usuario (nome, sobrenome, dataNasc, email, senha) VALUES ('$nome', '$sNome', '$data', '$email', '$senha') RETURNING id;";
     $result1 = pg_query($query1);
@@ -23,8 +24,8 @@ if (pg_num_rows($result) > 0) {
     }
 
     for ($i = 1; $i < 10; $i++) {
-        if (isset($_POST[$i]) && $_POST[$i] === true) {
-//        echo $_POST[$i];
+        if (isset($_POST[$i]) && $_POST[$i] == true) {
+            echo $_POST[$i];
             $query2 = "INSERT INTO us_int (id_us, id_int) values ($last_id, $i);";
             $result2 = pg_query($query2);
         }
@@ -35,6 +36,7 @@ if (pg_num_rows($result) > 0) {
         echo json_encode(array("sucesso" => true, "mailError" => false), JSON_FORCE_OBJECT);
     } else {
         echo json_encode(array("sucesso" => falseS, "mailError" => false), JSON_FORCE_OBJECT);
+        return false;
     }
 }
 

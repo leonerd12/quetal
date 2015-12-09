@@ -9,7 +9,7 @@ $array_resultado = array();
 
 include_once '../DB/conexao.php';
 
-$query = "SELECT a.id, a.nome, a.tipo, a.image_path FROM fil_emp b inner join empresa a on a.id = b.id_emp WHERE b.id_fil = $f1 OR b.id_fil = $f2 GROUP BY (a.id) HAVING COUNT(a.id)>1 ORDER by a.nome;";
+$query = "SELECT A.id, A.nome, A.tipo, A.image_path FROM empresa A INNER JOIN emp_int B ON A.id = B.id_emp INNER JOIN interesse C ON C.id = B.id_int WHERE C.id IN (SELECT A.id FROM interesse A INNER JOIN us_int B ON A.id = B.id_int INNER JOIN usuario C ON C.id = B.id_us WHERE C.id = ".$_SESSION['id'].") AND A.id IN (SELECT A.id FROM fil_emp b INNER JOIN empresa a ON a.id = b.id_emp WHERE b.id_fil = $f1 OR b.id_fil = $f2 GROUP BY (A.id) HAVING COUNT(A.id)>1 ORDER by A.id) GROUP BY A.id ORDER by A.id;";
 //echo "Filtragem: <br/>";
 $result = pg_query($query);
 $i = 0;
@@ -91,6 +91,8 @@ if ($f3 == 1) {
     array_push($array_resultado, $e3);
 //    echo '<br><hr>Resultado<br>';
 //    echo $e1[2] . " - <b>" . $e1[1] . "</b> | " . $e2[2] . " - <b>" . $e2[1] . "</b> | " . $e3[2] . " - <b>" . $e3[1];
+} else{
+    $resultado = "Não encontramos a melhor opção.<br/> Entre em contato conosco!";
 }
 
 pg_close($link);
@@ -101,11 +103,10 @@ pg_close($link);
 
         <!-- Header -->
         <header id="header">
-            <h1><strong><a href="../principal/">QUE TAL?</a></strong></h1>
+            <h1><a href="">QUE TAL?</a></h1>
             <nav id="nav">
                 <ul>
-                    <li class="hidden-lg hidden-md"><strong><a href="index.php">QUE TAL?</a></strong></li>
-                    <!--<li><a href="pesquisa.php">Pesquisar</a></li>-->
+                    <li class="hidden-lg hidden-md"><strong><a href="">QUE TAL?</a></strong></li>
                     <li><a href="../conta/">Conta</a></li>
                     <li><a href="../sair/">Logout</a></li>
                 </ul>

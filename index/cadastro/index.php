@@ -27,11 +27,11 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <h1><strong><a href="index.php">Que tal?</a></strong></h1>
+            <h1><a href="">Que tal?</a></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="../index.php#four" class="scrolly">Login</a></li>
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../#four" class="scrolly">Login</a></li>
                 </ul>
             </nav>
         </header>
@@ -69,51 +69,39 @@
                                 <input name="senha" id="scadInput" placeholder="Senha" type="password"  required="required"/>
                             </div>
                         </div>
-                        <div class="row uniform">
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g1" name="1" value="1">
-                                <label for="g1">Pipoca</label>
-                            </div>
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g2" name="2" value="2">
-                                <label for="g2">Música</label>
-                            </div>
-                        </div>
-                        <div class="row uniform">
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g3" name="3" value="3">
+                        <br/>
+                        <header class="major narrow">
+                            <p>Deixe marcado apenas opções de seu insteresse</p>
+                        </header>
+                        <div class="row">
+                            <div class="4u 4u(small)">
+                                <input type="checkbox" id="g1" name="1" value="1" checked="checked">
+                                <label for="g1">Pipoca</label><br/>
+                                <input type="checkbox" id="g2" name="2" value="2" checked="checked">
+                                <label for="g2">Música</label><br/>
+                                <input type="checkbox" id="g3" name="3" value="3" checked="checked">
                                 <label for="g3">Comida</label>
                             </div>
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g4" name="4" value="4">
-                                <label for="g4">Passeio</label>
-                            </div>
-                        </div>
-                        <div class="row uniform">
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g5" name="5" value="5">
-                                <label for="g5">Bebida</label>
-                            </div>
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g6" name="6" value="6">
+                            <div class="4u 4u(small)">
+                                <input type="checkbox" id="g4" name="4" value="4" checked="checked">
+                                <label for="g4">Passeio</label><br/>
+                                <input type="checkbox" id="g5" name="5" value="5" checked="checked">
+                                <label for="g5">Bebida</label><br/>
+                                <input type="checkbox" id="g6" name="6" value="6" checked="checked">
                                 <label for="g6">Companhia</label>
                             </div>
-                        </div>
-                        <div class="row uniform">
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g7" name="7" value="7">
-                                <label for="g7">Festa</label>
-                            </div>
-                            <div class="6u 6u(small)">
-                                <input type="checkbox" id="g9" name="9" value="9">
+                            <div class="4u 4u(small)">
+                                <input type="checkbox" id="g7" name="7" value="7" checked="checked">
+                                <label for="g7">Festa</label><br/>
+                                <input type="checkbox" id="g9" name="9" value="9" checked="checked">
                                 <label for="g9">Noite</label>
                             </div>
                         </div>
                     </div>
                     <br />
                     <ul class="actions">
-                        <li><button type="button" id="cadbtn" class="button special">Cadastrar</button></li>
-                        <li><button type="button" id="limpcadbtn" class="button alt">Limpar</button></li>
+                        <li><button type="submit" id="cadbtn" class="button special">Cadastrar</button></li>
+                        <li><button type="reset" id="limpcadbtn" class="button alt">Limpar</button></li>
                     </ul>
                 </form>
             </div>

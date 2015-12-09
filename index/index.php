@@ -33,10 +33,10 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <h1><strong><a href="../index/">Que tal?</a></strong></h1>
+            <h1><a href="">Que tal?</a></h1>
             <nav id="nav">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="">Home</a></li>
                     <li><a href="cadastro/">Cadastrar</a></li>
                     <li><a href="#four" class="scrolly">Login</a></li>
                 </ul>
@@ -56,45 +56,41 @@
             <div class="container">
                 <header class="major special">
                     <h2>Opções Varidas</h2>
-                    <p>Primeiro um jantar, depois uma balada e por fim um motel. <br/> <b>Que tal?</b></p>
+                    <p style="color: #777">Apenas 3 passos para começar a noite, <br/> <b>Que tal?</b></p>
                 </header>
                 <div class="feature-grid">
                     <div class="feature">
-                        <div class="image rounded"><img src="images/rest1.jpg" alt="" /></div>
+                        <div class="image rounded"><img src="images/pic02.jpg" alt="" /></div>
                         <div class="content">
                             <header>
                                 <h4>Restaurantes</h4>
-                                <p>Lorem ipsum dolor sit</p>
                             </header>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
                         </div>
                     </div>
                     <div class="feature">
-                        <div class="image rounded"><img src="images/bar.jpg" alt="" /></div>
+                        <div class="image rounded"><img src="images/pic03.jpeg" alt="" /></div>
                         <div class="content">
                             <header>
                                 <h4>Bares</h4>
-                                <p>Ratione maiores a, commodi</p>
                             </header>
                             <p>Animi mollitia optio culpa expedita. Dolorem alias minima culpa repellat. Dolores, fuga maiores ut obcaecati blanditiis, at aperiam doloremque.</p>
                         </div>
                     </div>
                     <div class="feature">
-                        <div class="image rounded"><img src="images/festa.jpg" alt="" /></div>
+                        <div class="image rounded"><img src="images/pic01.jpeg" alt="" /></div>
                         <div class="content">
                             <header>
                                 <h4>Festas</h4>
-                                <p>Possimus ex reprehenderit eaque</p>
                             </header>
                             <p>Maiores iusto inventore fugit architecto est iste expedita commodi sed, quasi feugiat nam neque mollitia vitae omnis, ea natus facere.</p>
                         </div>
                     </div>
                     <div class="feature">
-                        <div class="image rounded"><img src="images/motel.jpg" alt="" /></div>
+                        <div class="image rounded"><img src="images/pic04.png" alt="" /></div>
                         <div class="content">
                             <header>
                                 <h4>Motéis</h4>
-                                <p>Quaerat, excepturi eveniet laboriosam</p>
                             </header>
                             <p>Vitae earum unde, autem labore voluptas ex, iste dolorum inventore natus consequatur iure similique obcaecati aut corporis hic in! Porro sed.</p>
                         </div>
@@ -110,7 +106,7 @@
                     <h2>Entrar Agora</h2>
                     <p>Faça Login e tenha o passeio perfeito.</p>
                 </header>
-                <form action="#">
+                <form action="login.php" method="post">
                     <div class="container 50%">
                         <div class="row uniform 50%">
                             <div class="12u">
@@ -124,8 +120,9 @@
                     <br />
                     <div class="container 50%">
                     <ul class="actions">
-                        <li><button type="button" id="logarbtn" class="button small special" >Login</button></li>
-                        <li><button type="button" id="limparbtn" class="button alt">Limpar</button></li>
+                        <li><button type="submit" id="logarbtn" class="button small special" >Login</button></li>
+                        <li><button type="reset" id="limparbtn" class="button alt">Limpar</button></li>
+                        <li><a href="cadastro/"><button type="button" id="cadastrarbtn" class="button alt">Cadastrar</button></a></li>
                     </ul>
                     </div>
                 </form>
