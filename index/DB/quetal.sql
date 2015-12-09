@@ -23,34 +23,34 @@
 -- id serial PRIMARY KEY,
 -- nome varchar(100),
 -- tipo varchar(50),
--- image_path VARCHAR(255) NOT NULL DEFAULT ''
+-- image_path VARCHAR(255) NOT NULL DEFAULT '',
 -- );
 
 -- 
 -- INSERT INTO empresa (nome, tipo) VALUES ('Recanto da Peixada', 'restaurante', 'images/.jpg');
--- INSERT INTO empresa (nome, tipo) VALUES ('La Sorelle Pizzaria', 'restaurante');
--- INSERT INTO empresa (nome, tipo) VALUES ('X.Com Sanduicheria', 'restaurante');
--- INSERT INTO empresa (nome, tipo) VALUES ('O Cajueiro', 'restaurante');
--- INSERT INTO empresa (nome, tipo) VALUES ('Ville Roy Grill', 'restaurante');
--- INSERT INTO empresa (nome, tipo) VALUES ('Água Doce Cachaçaria', 'restaurante');
--- INSERT INTO empresa (nome, tipo) VALUES ('Cine Super K', 'cinema');
--- INSERT INTO empresa (nome, tipo) VALUES ('Cine Araújo', 'cinema');
--- INSERT INTO empresa (nome, tipo) VALUES ('Cinemark', 'cinema');
--- INSERT INTO empresa (nome, tipo) VALUES ('Santa Cerva PUB', 'balada');
--- INSERT INTO empresa (nome, tipo) VALUES ('CH Bar na Fazenda', 'balada');
--- INSERT INTO empresa (nome, tipo) VALUES ('Antique PUB', 'balada');
--- INSERT INTO empresa (nome, tipo) VALUES ('Marina do Rio Branco', 'balada');
--- INSERT INTO empresa (nome, tipo) VALUES ('Almirante Club', 'balada');
--- INSERT INTO empresa (nome, tipo) VALUES ('Haras Cunhã Pucá', 'balada');
--- INSERT INTO empresa (nome, tipo) VALUES ('Opium Motel', 'motel');
--- INSERT INTO empresa (nome, tipo) VALUES ('Motel Le Baron', 'motel');
--- INSERT INTO empresa (nome, tipo) VALUES ('Motel Bhurity''s', 'motel');
--- INSERT INTO empresa (nome, tipo) VALUES ('Afrodite Motel', 'motel');
--- INSERT INTO empresa (nome, tipo) VALUES ('Praça das Águas', 'passeio');
--- INSERT INTO empresa (nome, tipo) VALUES ('Praça da Bandeira', 'passeio');
--- INSERT INTO empresa (nome, tipo) VALUES ('Complexo Ayrton Senna', 'passeio');
--- INSERT INTO empresa (nome, tipo) VALUES ('Praça Germano Sampaio', 'passeio');
--- INSERT INTO empresa (nome, tipo) VALUES ('Orla Taumanan', 'passeio');
+-- INSERT INTO empresa (nome, tipo) VALUES ('La Sorelle Pizzaria', 'restaurante', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('X.Com Sanduicheria', 'restaurante', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('O Cajueiro', 'restaurante', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Ville Roy Grill', 'restaurante', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Água Doce Cachaçaria', 'restaurante', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Cine Super K', 'cinema', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Cine Araújo', 'cinema', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Cinemark', 'cinema', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Santa Cerva PUB', 'balada', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('CH Bar na Fazenda', 'balada', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Antique PUB', 'balada', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Marina do Rio Branco', 'balada', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Almirante Club', 'balada', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Haras Cunhã Pucá', 'balada', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Opium Motel', 'motel', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Motel Le Baron', 'motel', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Motel Bhurity''s', 'motel', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Afrodite Motel', 'motel', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Praça das Águas', 'passeio', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Praça da Bandeira', 'passeio', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Complexo Ayrton Senna', 'passeio', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Praça Germano Sampaio', 'passeio', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Orla Taumanan', 'passeio', 'images/.jpg');
 -- 
 -- Update empresa set image_path = 'images/orla.jpg' WHERE id = 41;
 -- 

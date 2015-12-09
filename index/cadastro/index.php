@@ -76,7 +76,7 @@
                         <div class="row">
                             <div class="4u 4u(small)">
                                 <input type="checkbox" id="g1" name="1" value="1" checked="checked">
-                                <label for="g1">Pipoca</label><br/>
+                                <label for="g1">Filmes</label><br/>
                                 <input type="checkbox" id="g2" name="2" value="2" checked="checked">
                                 <label for="g2">Música</label><br/>
                                 <input type="checkbox" id="g3" name="3" value="3" checked="checked">
@@ -88,7 +88,7 @@
                                 <input type="checkbox" id="g5" name="5" value="5" checked="checked">
                                 <label for="g5">Bebida</label><br/>
                                 <input type="checkbox" id="g6" name="6" value="6" checked="checked">
-                                <label for="g6">Companhia</label>
+                                <label for="g6">Sexo</label>
                             </div>
                             <div class="4u 4u(small)">
                                 <input type="checkbox" id="g7" name="7" value="7" checked="checked">
