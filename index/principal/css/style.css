@@ -56,11 +56,11 @@
                 }
                 
                 .row a:hover{
-                    font-size: 19px;
+                    font-size: 16px;
                 }
                 
                 .row a:hover img{
-                    
+                    border: 4px solid #f32853;
                     ;
                 }
 

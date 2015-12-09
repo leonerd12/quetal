@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("#cadbtn").click(function() {
         $.ajax({
-            url: '/cadastro/cadastrar.php',
+            url: '/quetal/index/cadastro/cadastrar.php',
             type: 'POST',
             data: {
                 nome: $("#nomeInput").val(),
@@ -23,7 +23,7 @@ $(document).ready(function() {
         }).done(function(data) {
             var dados = JSON.parse(data);
             if (dados.sucesso) {
-                window.location.replace("/");
+                window.location.replace("/quetal/index/");
             } else {
                 alert("Email já cadastrado.");
             }

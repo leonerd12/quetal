@@ -1,16 +1,16 @@
-$(document).ready(function() {
-    $("#logarbtn").click(function() {
+$(document).ready(function () {
+    $("#logarbtn").click(function () {
         $.ajax({
-            url: '/login.php',
+            url: '/quetal/index/login.php',
             type: 'POST',
             data: {
                 email: $("#emailInput").val(),
                 senha: $("#senhaInput").val()
             }
-        }).done(function(data) {
+        }).done(function (data) {
             var dados = JSON.parse(data);
             if (dados.sucesso) {
-                window.location.replace("/principal/");
+                location.reload();
             } else {
                 if (dados.erroSenha) {
                     alert("Dados incorretos.");
@@ -21,7 +21,7 @@ $(document).ready(function() {
             }
         });
     });
-    $("#limparbtn").click(function() {
+    $("#limparbtn").click(function () {
         $("#emailInput").val("");
         $("#senhaInput").val("");
     });

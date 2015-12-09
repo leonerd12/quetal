@@ -120,8 +120,8 @@
                     <br />
                     <div class="container 50%">
                     <ul class="actions">
-                        <li><button type="submit" id="logarbtn" class="button small special" >Login</button></li>
-                        <li><button type="reset" id="limparbtn" class="button alt">Limpar</button></li>
+                        <li><button type="button" id="logarbtn" class="button small special" >Login</button></li>
+                        <li><button type="button" id="limparbtn" class="button alt">Limpar</button></li>
                         <li><a href="cadastro/"><button type="button" id="cadastrarbtn" class="button alt">Cadastrar</button></a></li>
                     </ul>
                     </div>

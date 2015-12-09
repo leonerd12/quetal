@@ -29,7 +29,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
                 echo json_encode(array("sucesso" => true),JSON_FORCE_OBJECT);
                 //$_SESSION['hora'] = time();
                 //$_SESSION['tempolimite'] = 600;
-                header("location: principal/");
+//                header("location: principal/");
 //                break;
             } else {
                 //Usuario ou senha invalido

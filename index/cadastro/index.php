@@ -100,8 +100,8 @@
                     </div>
                     <br />
                     <ul class="actions">
-                        <li><button type="submit" id="cadbtn" class="button special">Cadastrar</button></li>
-                        <li><button type="reset" id="limpcadbtn" class="button alt">Limpar</button></li>
+                        <li><button type="button" id="cadbtn" class="button special">Cadastrar</button></li>
+                        <li><button type="button" id="limpcadbtn" class="button alt">Limpar</button></li>
                     </ul>
                 </form>
             </div>
