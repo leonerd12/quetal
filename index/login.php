@@ -25,6 +25,7 @@ if (empty($_POST['email']) || empty($_POST['senha'])) {
                 $_SESSION['sNome'] = $linha['sobrenome'];
                 $_SESSION['email'] = $linha['email'];
                 $_SESSION['senha'] = $linha['senha'];
+                $_SESSION['imagem'] = $linha['image_path'];
                 $_SESSION['logado'] = 1;
                 echo json_encode(array("sucesso" => true),JSON_FORCE_OBJECT);
                 //$_SESSION['hora'] = time();

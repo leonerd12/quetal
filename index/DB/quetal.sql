@@ -397,3 +397,7 @@
 -- INSERT INTO fil_emp (id_fil, id_emp) VALUES (5,47);
 -- INSERT INTO fil_emp (id_fil, id_emp) VALUES (6,42);
 -- INSERT INTO fil_emp (id_fil, id_emp) VALUES (6,46);
+
+
+-- ALTER TABLE usuario ADD COLUMN image_path VARCHAR(255) NOT NULL DEFAULT 'images/avatar.jpg';
+

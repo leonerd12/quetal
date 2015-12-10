@@ -28,12 +28,17 @@ else echo 'images/avatar.jpg' ?>" alt="" /></a>
             <h1><strong>Bem vindo(a), <?= $_SESSION['nome'] ?></strong>
                 <br />
                 <br/>
+            </h1>
                 <div>
                     <a href="../principal/"><button class="button special">QUE TAL?</button></a><br/><br/>
                     <a href="../sair/"><button class="button icon"><i class="icon fa-sign-out fa-lg"></i> Sair</button></a>
                     <!--<a href="../principal/principal.php">Voltar</a>-->
                 </div>
-            </h1>
+            <div>
+                <a href="../principal/"><button class="button special">QUE TAL?</button></a><br/><br/>
+                <a href="../sair/"><button class="button icon"><i class="icon fa-sign-out fa-lg"></i> Sair</button></a>
+                <!--<a href="../principal/principal.php">Voltar</a>-->
+            </div>
         </header>
 
         <!-- Main -->
@@ -45,7 +50,6 @@ else echo 'images/avatar.jpg' ?>" alt="" /></a>
             <!-- Two -->
             <section id="two">
                 <h1>Últimas sugestões</h1>
-
                 <?php
                 include_once '../DB/conexao.php';
 

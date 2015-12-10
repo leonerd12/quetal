@@ -140,7 +140,6 @@ pg_close($link);
                     $emp[4] = $array_resultado[$i];
                 }
             }
-            
             $id = array();
             for ($i = 0; $i < 5; $i++):
                 if (isset($emp[$i])):
@@ -158,10 +157,10 @@ pg_close($link);
         </div>
         <div class="container 100%">
             <div class="row uniform 50%">
-                <div class="6u">
+                <div class="col-md-6 col-sm-12">
                     <a href="../conta/addSugestao.php?id1=<?=$id[0]; if (isset($id['1'])) echo "&id2=".$id[1]; if(isset($id[2])) echo "&id3=".$id[2]?>" ><button class="button special btn-lg form-control">Gostei das sugetões!</button></a>
                 </div>
-                <div class="6u">
+                <div class="col-md-6 col-sm-12">
                     <a href="../conta/" ><button class="button btn-lg form-control">Não Gostei das sugestões!</button></a>
                 </div>
             </div>

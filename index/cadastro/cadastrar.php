@@ -23,12 +23,11 @@ if (pg_num_rows($result) > 0) {
     }
 
     for ($i = 1; $i < 10; $i++) {
-        if (isset($_POST[$i]) && $_POST[$i] == true) {
+        if ($_POST[$i] == 1) {
             $query2 = "INSERT INTO us_int (id_us, id_int) values ($last_id, $i);";
             $result2 = pg_query($query2);
         }
     }
-
 
     if ($result1 && $result2) {
         echo json_encode(array("sucesso" => true, "mailError" => false), JSON_FORCE_OBJECT);

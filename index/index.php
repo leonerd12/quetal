@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if(isset($_SESSION["logado"]) && $_SESSION["logado"] == 1){
-        header("location: principal/");
-    }
+session_start();
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == 1) {
+    header("location: principal/");
+}
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -119,11 +119,11 @@
                     </div>
                     <br />
                     <div class="container 50%">
-                    <ul class="actions">
-                        <li><button type="button" id="logarbtn" class="button small special" >Login</button></li>
-                        <li><button type="button" id="limparbtn" class="button alt">Limpar</button></li>
-                        <li><a href="cadastro/"><button type="button" id="cadastrarbtn" class="button alt">Cadastrar</button></a></li>
-                    </ul>
+                        <ul class="actions">
+                            <li><button type="button" id="logarbtn" class="button special" >Login</button></li>
+                            <li><button type="button" id="limparbtn" class="button alt">Limpar</button></li>
+                            <li><button type="button" id="cadastrarbtn" class="button alt">Cadastrar</button></li>
+                        </ul>
                     </div>
                 </form>
             </div>

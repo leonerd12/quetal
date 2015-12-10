@@ -10,7 +10,7 @@ $(document).ready(function () {
         }).done(function (data) {
             var dados = JSON.parse(data);
             if (dados.sucesso) {
-                location.reload();
+                location.replace("/quetal/index/");
             } else {
                 if (dados.erroSenha) {
                     alert("Dados incorretos.");
@@ -24,5 +24,8 @@ $(document).ready(function () {
     $("#limparbtn").click(function () {
         $("#emailInput").val("");
         $("#senhaInput").val("");
+    });
+    $("#cadastrarbtn").click(function(){
+        location.replace("/quetal/index/cadastro/");
     });
 });

@@ -11,14 +11,14 @@ $(document).ready(function() {
                 dd: $("#diaInput").val(),
                 email: $("#ecadInput").val(),
                 senha: $("#scadInput").val(),
-                1: $("#g1")[0].checked,
-                2: $("#g2")[0].checked,
-                3: $("#g3")[0].checked,
-                4: $("#g4")[0].checked,
-                5: $("#g5")[0].checked,
-                6: $("#g6")[0].checked,
-                7: $("#g7")[0].checked,
-                9: $("#g9")[0].checked
+                1: ($("#g1")[0].checked) ? 1 : 0,
+                2: ($("#g2")[0].checked) ? 1 : 0,
+                3: ($("#g3")[0].checked) ? 1 : 0,
+                4: ($("#g4")[0].checked) ? 1 : 0,
+                5: ($("#g5")[0].checked) ? 1 : 0,
+                6: ($("#g6")[0].checked) ? 1 : 0,
+                7: ($("#g7")[0].checked) ? 1 : 0,
+                9: ($("#g9")[0].checked) ? 1 : 0
             }
         }).done(function(data) {
             var dados = JSON.parse(data);
@@ -30,7 +30,12 @@ $(document).ready(function() {
         });
     });
     $("#limparcadbtn").click(function() {
-        $("#emailInput").val("");
-        $("#senhaInput").val("");
+        $("#nomeInput").val("");
+        $("#snomeInput").val("");
+        $("#anoInput").val("");
+        $("#mesInput").val("");
+        $("#diaInput").val("");
+        $("#ecadInput").val("");
+        $("#scadInput").val("");
     });
 });
