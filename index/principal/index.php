@@ -23,8 +23,8 @@ if ($_SESSION["logado"] == null) {
 <section id="two" class="wrapper style2 special">
     <div class="container">
         <header class="major">
-            <h2>O que você quer fazer?</h2>
-            <p>O que temos para hoje à noite?</p>
+            <h2>Com quem você quer sair hoje?</h2>
+            <p>Selecione a melhor opção!</p>
         </header>
         <div class="row">
             <div class="col-md-4 col-sm-12">

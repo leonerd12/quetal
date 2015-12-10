@@ -23,14 +23,14 @@ $f1 = $_GET['f1'];
 <section id="two" class="wrapper style2 special">
     <div class="container">
         <header class="major">
-            <h2>Quanto podemos gastar hoje?</h2>
+            <h2>Quanto você quer gastar?</h2>
             <p>Selecione a melhor opção!</p>
         </header>
         <div class="row ">
             <div class="col-md-4 col-sm-12">
                 <a href="filtro3.php?f1=<?= $f1 ?>&f2=4">                        
                     <div class="image fit captioned">
-                        <img src="images/tantofaz.jpg" alt="" />
+                        <img src="images/din.jpg" alt="" />
                         <h3>O valor não importa.</h3>
                     </div>
                 </a>
@@ -38,16 +38,16 @@ $f1 = $_GET['f1'];
             <div class="col-md-4 col-sm-12">
                 <a href="filtro3.php?f1=<?= $f1 ?>&f2=5">                        
                     <div class="image fit captioned">
-                        <img src="images/menosdinheiro.jpg" alt="" />
-                        <h3>Tô com pouca grana hoje :(</h3>
+                        <img src="images/pouco.jpg" alt="" />
+                        <h3>De R$10,00 a R$100,00</h3>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 col-sm-12">
                 <a href="filtro3.php?f1=<?= $f1 ?>&f2=6">                        
                     <div class="image fit captioned">
-                        <img src="images/maisdinheiro.jpg" alt="" />
-                        <h3>Posso gastar um pouco mais :)</h3>
+                        <img src="images/muito.jpg" alt="" />
+                        <h3>Mais de R$100,00</h3>
                     </div>
                 </a>
             </div>

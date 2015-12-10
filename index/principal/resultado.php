@@ -140,11 +140,14 @@ pg_close($link);
                     $emp[4] = $array_resultado[$i];
                 }
             }
+            
+            $id = array();
             for ($i = 0; $i < 5; $i++):
                 if (isset($emp[$i])):
+                    array_push($id, $emp[$i][0]);
                     ?>
                     <div class="col-md-4 col-sm-12">
-                        <a href="#">                        
+                        <a href="">                        
                             <div class="image fit captioned">
                                 <img src="<?= $emp[$i][3] ?>" alt="" />
                                 <h3><?= $emp[$i][1] ?></h3>
@@ -156,10 +159,10 @@ pg_close($link);
         <div class="container 100%">
             <div class="row uniform 50%">
                 <div class="6u">
-                    <a href="#" ><button class="button special btn-lg form-control">Adorei as sugetões!</button></a>
+                    <a href="../conta/addSugestao.php?id1=<?=$id[0]; if (isset($id['1'])) echo "&id2=".$id[1]; if(isset($id[2])) echo "&id3=".$id[2]?>" ><button class="button special btn-lg form-control">Gostei das sugetões!</button></a>
                 </div>
                 <div class="6u">
-                    <a href="#" ><button class="button btn-lg form-control">Não Gostei das sugestões!</button></a>
+                    <a href="../conta/" ><button class="button btn-lg form-control">Não Gostei das sugestões!</button></a>
                 </div>
             </div>
         </div>

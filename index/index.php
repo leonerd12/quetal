@@ -65,7 +65,7 @@
                             <header>
                                 <h4>Restaurantes</h4>
                             </header>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore esse tenetur accusantium porro omnis, unde mollitia totam sit nesciunt consectetur.</p>
+                            <p>Os melhores restaurantes da cidade. Selecione a opção "Comida" no cadastro.</p>
                         </div>
                     </div>
                     <div class="feature">
@@ -74,7 +74,7 @@
                             <header>
                                 <h4>Bares</h4>
                             </header>
-                            <p>Animi mollitia optio culpa expedita. Dolorem alias minima culpa repellat. Dolores, fuga maiores ut obcaecati blanditiis, at aperiam doloremque.</p>
+                            <p>Visitar aquele bar para descontrair de uma estressante semana. Opção "Bebida".</p>
                         </div>
                     </div>
                     <div class="feature">
@@ -83,7 +83,7 @@
                             <header>
                                 <h4>Festas</h4>
                             </header>
-                            <p>Maiores iusto inventore fugit architecto est iste expedita commodi sed, quasi feugiat nam neque mollitia vitae omnis, ea natus facere.</p>
+                            <p>As festas e baladas mais conhecidas. Escolha "Festa" no cadastro.</p>
                         </div>
                     </div>
                     <div class="feature">
@@ -92,7 +92,7 @@
                             <header>
                                 <h4>Motéis</h4>
                             </header>
-                            <p>Vitae earum unde, autem labore voluptas ex, iste dolorum inventore natus consequatur iure similique obcaecati aut corporis hic in! Porro sed.</p>
+                            <p>Para terminar a noite com chave de ouro, marque a opção "Sexo" durante o cadastro.</p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                     <li><a href="#" class="icon fa-instagram"></a></li>
                 </ul>
                 <ul class="copyright">
-                    <li>&copy; Silicius | <?= date("Y")?></li>
+                    <li>&copy; QUE TAL? | <?= date("Y")?></li>
                 </ul>
             </div>
         </footer>

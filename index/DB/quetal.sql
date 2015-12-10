@@ -27,8 +27,8 @@
 -- );
 
 -- 
--- INSERT INTO empresa (nome, tipo) VALUES ('Recanto da Peixada', 'restaurante', 'images/.jpg');
--- INSERT INTO empresa (nome, tipo) VALUES ('La Sorelle Pizzaria', 'restaurante', 'images/.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('Recanto da Peixada', 'restaurante', 'images/recanto.jpg');
+-- INSERT INTO empresa (nome, tipo) VALUES ('La Sorelle Pizzaria', 'restaurante', 'images/sorelle.jpg');
 -- INSERT INTO empresa (nome, tipo) VALUES ('X.Com Sanduicheria', 'restaurante', 'images/.jpg');
 -- INSERT INTO empresa (nome, tipo) VALUES ('O Cajueiro', 'restaurante', 'images/.jpg');
 -- INSERT INTO empresa (nome, tipo) VALUES ('Ville Roy Grill', 'restaurante', 'images/.jpg');
@@ -52,7 +52,7 @@
 -- INSERT INTO empresa (nome, tipo) VALUES ('Praça Germano Sampaio', 'passeio', 'images/.jpg');
 -- INSERT INTO empresa (nome, tipo) VALUES ('Orla Taumanan', 'passeio', 'images/.jpg');
 -- 
--- Update empresa set image_path = 'images/orla.jpg' WHERE id = 41;
+-- Update empresa set image_path = 'images/.jpg' WHERE id = 25;
 -- 
 -- CREATE TABLE interesse(
 -- id serial PRIMARY KEY,
@@ -311,13 +311,89 @@
 -- INSERT INTO fil_emp (id_fil, id_emp) VALUES (6,36);
 
 
+-- CREATE TABLE us_sugestao(
+-- id serial,
+-- emp1 int REFERENCES empresa(id) ON DELETE CASCADE,
+-- emp2 int NULL REFERENCES empresa(id) ON DELETE CASCADE, 
+-- emp3 int NULL REFERENCES empresa(id) ON DELETE CASCADE,
+-- id_us int REFERENCES usuario(id) ON DELETE CASCADE
+-- );
+
 -- DROP TABLE usuario, empresa, interesse, us_int, emp_int;
 -- SELECT * FROM empresa inner join fil_emp on empresa.id = fil_emp.id_emp inner join filtro on filtro.id = fil_emp.id_fil;
 -- SELECT * FROM fil_emp inner join empresa on empresa.id = fil_emp.id_emp where id_fil = 1 OR id_fil = 2;
 -- SELECT * FROM fil_emp inner join filtro on filtro.id = fil_emp.id_fil inner join empresa on empresa.id = fil_emp.id_emp;
 -- SELECT DISTINCT empresa.nome, empresa.tipo FROM empresa INNER JOIN emp_int ON empresa.id = emp_int.id_emp INNER JOIN interesse ON interesse.id = emp_int.id_int inner join fil_emp on empresa.id = fil_emp.id_emp inner join filtro on filtro.id = fil_emp.id_fil WHERE interesse.id = 3;
-SELECT * FROM usuario;
+-- SELECT * FROM empresa;
+-- SELECT * FROM us_sugestao;
 -- SELECT A.nome, C.tipo FROM empresa A INNER JOIN emp_int B ON A.id = B.id_emp INNER JOIN interesse C ON C.id = B.id_int WHERE C.id IN (SELECT A.id FROM interesse A INNER JOIN us_int B ON A.id = B.id_int INNER JOIN usuario C ON C.id = B.id_us WHERE C.id = 6);
 
 -- ALTER TABLE empresa ADD COLUMN image_path VARCHAR(255) NOT NULL DEFAULT '';
 
+
+
+-- update empresa set nome='Subway' where id=20;
+-- update empresa set nome='Bar do Rock' where id=32;
+-- update empresa set nome='Bar do Rock' where id=32;
+-- delete from empresa where id=31;
+-- INSERT INTO empresa (nome, tipo, image_path) VALUES ('Bob''s', 'restaurante', 'images/bobs.jpg');
+-- INSERT INTO empresa (nome, tipo, image_path) VALUES ('Barril Roraima', 'restaurante', 'images/barril.jpg');
+-- INSERT INTO empresa (nome, tipo, image_path) VALUES ('Chão de Brasa', 'restaurante', 'images/chao.jpg');
+-- INSERT INTO empresa (nome, tipo, image_path) VALUES ('Giraffas', 'restaurante', 'images/giraffas.jpg');
+-- INSERT INTO empresa (nome, tipo, image_path) VALUES ('Trigos Gourmet', 'restaurante', 'images/trigos.jpg');
+-- INSERT INTO empresa (nome, tipo, image_path) VALUES ('Umai Temakeria', 'restaurante', 'images/umai.jpg');
+-- 
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (42,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (42,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (42,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (42,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (43,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (43,5);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (43,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (43,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (44,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (44,5);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (44,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (44,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (45,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (45,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (45,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (45,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (46,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (46,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (46,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (46,9);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (47,3);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (47,6);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (47,8);
+-- INSERT INTO emp_int (id_emp, id_int) VALUES (47,9);
+-- 
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (1,42);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (1,43);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (1,44);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (1,45);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (1,46);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (1,47);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (2,42);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (2,43);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (2,44);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (2,45);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (2,46);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (2,47);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (3,42);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (3,43);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (3,45);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (3,46);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (3,47);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (4,42);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (4,43);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (4,44);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (4,45);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (4,46);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (4,47);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (5,43);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (5,44);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (5,45);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (5,47);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (6,42);
+-- INSERT INTO fil_emp (id_fil, id_emp) VALUES (6,46);

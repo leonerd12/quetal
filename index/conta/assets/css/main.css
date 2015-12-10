@@ -1551,7 +1551,7 @@
 /* Basic */
 
 	body {
-		background: #fff;
+		background: #222;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1603,7 +1603,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #ddd;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -2091,6 +2091,26 @@
 				width: 100%;
 			}
 
+
+		.image.captioned {
+			border-radius: 0;
+			margin-bottom: 4em;
+		}
+
+			.image.captioned img {
+				border-radius: 15px;
+			}
+
+			.image.captioned h3 {
+                            text-align: center;
+                                color: #fff;
+				background-color: rgba(0, 0, 0, 0.5);
+				box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.15);
+				display: block;
+				padding: 1em 1em;
+				border-radius: 10px;
+			}                        
+                        
 /* List */
 
 	ol {
@@ -2330,12 +2350,12 @@
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
-		border-radius: 0.35em;
+		border-radius: 4px;
 		border: solid 3px #efefef;
-		color: #787878 !important;
+		color: #fff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 400;
+		font-weight: 700;
 		height: 3.15em;
 		height: calc(2.75em + 6px);
 		line-height: 2.75em;
@@ -2343,6 +2363,7 @@
 		padding: 0 1.5em;
 		text-align: center;
 		text-decoration: none;
+		text-transform: uppercase;
 		white-space: nowrap;
 	}
 
@@ -2350,17 +2371,14 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			background-color: rgba(144, 144, 144, 0.2);
 		}
 
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			background-color: rgba(144, 144, 144, 0.2);
 		}
 
 		input[type="submit"].icon,
@@ -2405,8 +2423,8 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #49bf9d;
-			border-color: #49bf9d;
+			background-color: #f32853;
+			border-color: #f32853;
 			color: #ffffff !important;
 		}
 
@@ -2414,8 +2432,8 @@
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			.button.special:hover {
-				background-color: #5cc6a7;
-				border-color: #5cc6a7;
+				background-color: #f44066;
+				border-color: #f44066;
 			}
 
 			input[type="submit"].special:active,
@@ -2465,7 +2483,7 @@
 	#header {
 		background-color: #1f1815;
 		background-attachment: scroll,								fixed;
-		background-image: url("images/overlay.png"), url("../../images/banner_1.jpg");
+		background-image: url("images/overlay.png"), url("images/luzes.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								auto 100%;
